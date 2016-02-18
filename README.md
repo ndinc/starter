@@ -247,3 +247,13 @@ There are some files that belong in your root destination directory that you won
 </a>
 
 Visit [code.viget.com](http://code.viget.com) to see more projects from [Viget.](https://viget.com)
+
+## Todo
+- デフォルトのモバイルの対応を
+- テストサーバーへの deploy 対応
+- scaffold の対応
+- wp scaffold の対応
+- よくつかう js プラグインを入れる
+- sprite-smith での対応
+- useminでstylesheetsまとめる
+- foundation 6 にアップデート（st3のsnippetが作られたら）
