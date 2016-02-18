@@ -1,19 +1,20 @@
 {
   "root": {
-    "src": "./src",
-    "dest": "./public"
+    "src": "./prototype/src",
+    "dest": "./prototype/dest",
+    "app": "./public"
   },
 
   "tasks": {
     "browserSync": {
       "server": {
-        "baseDir": "public"
+        "baseDir": "prototype/dest"
       }
     },
 
     "static": {
       "src": "static",
-      "dest": "./"
+      "dest": "./static"
     },
 
     "js": {
@@ -28,7 +29,7 @@
     },
 
     "css": {
-      "src": "stylesheets",
+      "src": "sass",
       "dest": "stylesheets",
       "autoprefixer": {
         "browsers": ["last 3 version"]
@@ -47,7 +48,7 @@
         "collapseWhitespace": true
       },
       "extensions": ["html", "json"],
-      "excludeFolders": ["layouts", "shared", "macros", "data"]
+      "excludeFolders": ["sections", "modules", "includes", "helpers", "data"]
     },
 
     "images": {

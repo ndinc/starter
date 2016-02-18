@@ -1,0 +1,42 @@
+{% from 'helpers/helpers.html' import sprite %}
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ja"><![endif]-->
+<!--[if IE 7]>   <html class="no-js lt-ie9 lt-ie8" lang="ja"><![endif]-->
+<!--[if IE 8]>   <html class="no-js lt-ie9" lang="ja"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ja"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>{% block title %}Defaults Title{% endblock %}</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+  {% block head %}
+  <meta name="description" content="Dedault description">
+  <meta name="keywords" content="{{ socialLinks[0].id }}">
+  {% endblock %}
+  {% block ogp %}
+  <meta property="og:title" content="OPG TITLE">
+  <meta property="og:description" content="OPG DESCRIPTION">
+  <meta property="og:url" content="OPG URL">
+  <meta property="og:image" content="OPG IMAGE">
+  <meta property="og:site_name" content="OPG SITE_NAME">
+  <meta property="og:type" content="OPG TYPE">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="TWITTER SITE">
+  <meta name="twitter:title" content="TWITTER TITLE">
+  <meta name="twitter:description" content="TWITTER DESCRIPTION">
+  <meta name="twitter:image:src" content="TWITTER IMAGE:SRC">
+  <meta name="twitter:domain" content="TWITTER DOMAIN">
+  {% endblock %}
+  {% include "includes/app-icons.html" %}
+</head>
+<body>
+  <div id="container">
+    {% include "sections/header.html" %}
+    {% block content %}{% endblock %}
+    {% include "sections/footer.html" %}
+  </div>
+  {% block javascript %}{% endblock %}
+</body>
+</html>
