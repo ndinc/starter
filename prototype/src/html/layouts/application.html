@@ -31,13 +31,13 @@
   {% endblock %}
   {% include "includes/app-icons.html" %}
 </head>
-<body>
+<body data-page-id="{% block page_id %}{% endblock %}">
   <div id="container">
     {% include "sections/header.html" %}
     {% block main %}{% endblock %}
     {% include "sections/footer.html" %}
   </div>
   <script src="javascripts/shared.js"></script>
-  {% block javascript %}{% endblock %}
+  <script src="javascripts/app.js"></script>
 </body>
 </html>

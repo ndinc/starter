@@ -1,12 +1,13 @@
 {% extends 'layouts/application.html' %}
 
+{% block page_id %}about{% endblock %}
+
 {% block title %}TEST{% endblock %}
 
 
-{% block content %}
+{% block main %}
   I am page 2, and have different javascript.
 {% endblock %}
 
 {% block javascript %}
-<script src="javascripts/page.js"></script>
 {% endblock %}

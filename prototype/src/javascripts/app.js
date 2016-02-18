@@ -1,7 +1,10 @@
-import './asyncModules'
-import exclaimify from './exclaimify'
+import routing from './util/routing'
 
 const $ = require('jquery')
+
+$(function(){
+  const app = new App();
+})
 
 class App {
   constructor(el) {
@@ -11,24 +14,17 @@ class App {
   }
 
   initialize() {
-    console.log(`
-      asset references like this one:
-      images/gulp.png
-      get updated in js too!
-    `)
-
-    const button = document.getElementById('button')
-    button.addEventListener('click', function() {
-      // CommonJS async syntax webpack magic
-      require.ensure([], function() {
-        const message = require("./asyncMessage")
-        alert(exclaimify(message))
-      })
+    var _this = this;
+    // routing.js load後
+    require.ensure([], ()=> {
+      routing()
+      this.common_scripts()
     })
+
+  }
+
+  common_scripts(){
+    // common scripts
+    console.log('common scripts here !');
   }
 }
-
-
-$(function(){
-  const app = new App();
-})
