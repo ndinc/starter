@@ -1,0 +1,157 @@
+// .l-home
+//   background: #000
+// body
+//   background: #000
+
+article ,
+section ,
+footer ,
+header ,
+aside ,
+nav
+  border: 1px solid #f00
+  margin: 10px 0
+  background: rgba(255, 0, 0, .1)
+  position: relative
+  &:before
+    content: attr(class)
+    background: #f00
+    padding: 5px
+    color: #fff
+    font-weight: bold
+    font-size: 10px
+    position: absolute
+    left: 0
+    top: 0
+    opacity: .7
+
+[class^="l-"]
+  background: rgba(255, 0, 0, .1) !important
+  padding: 30px 0
+
+[class^="s-"]
+  background: rgba(0, 255, 0, .1) !important
+  padding: 30px 0
+
+[class^="m-"]
+  background: rgba(0, 0, 255, .1) !important
+
+.page-section
+  margin: 60px 0
+
+.content-section
+  background: transparent !important
+  padding: 20px
+
+
+
+// #####
+
+$light-grey: lightgrey
+$dark-grey: #555
+$red: #e53339
+
+$vigetNavy: #092f40
+$vigetOrange: #f26d21
+$vigetBlue: #1496bb
+
+$facebookBlue: #3b5998
+$twitterBlue: #4099ff
+Status API Training Shop Blog About Pricing
+
+
+
+=font-smoothing
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+
+  // Based on http://codepen.io/javasteve99/pen/hDxpn
+=font-face($font-family, $file-path, $font-weight: normal, $font-style: normal)
+    @font-face
+      font-family: $font-family
+      src: url('#{$file-path}.eot')
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype'), url('#{$file-path}.svg##{$font-family}') format('svg')
+      font-weight: $font-weight
+      font-style: $font-style
+
+    // Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+    @media screen and (-webkit-min-device-pixel-ratio: 0)
+      @font-face
+        font-family: $font-family
+        src: url('#{$file-path}.svg##{$font-family}') format('svg')
+
+
+body
+  +font-smoothing // <- _mixins.scss
+  color: $vigetNavy
+  font-family: OpenSans, sans-serif
+  font-size: 1.25em
+  padding: 5%
+  text-align: center
+
+small
+  font-size: 0.75em
+  margin-top: 0.25em
+
+code
+  background-color: $light-grey
+  border-radius: 3px
+  display: inline-block
+  font-family: monospace
+  font-size: 1.25em
+  padding: 0.25em 0.5em
+
+a
+  color: $red
+  text-decoration: none
+  opacity: 1
+  // autoprefixer will prefix this for you!
+  transition: all .2s ease-in-out
+
+  &:hover
+    opacity: 0.75
+
+.screenreader
+  clip: rect(1px, 1px, 1px, 1px)
+  position: absolute !important
+
+.highlight
+  background-color: $vigetBlue
+  color: white
+
+.icon
+  font-size: 32px
+  margin: 4px
+
+  &.-instagram
+    color: $dark-grey
+
+  &.-facebook
+    color: $facebookBlue
+
+  &.-twitter
+    color: $twitterBlue
+
+
+.sprite
+  display: inline-block
+  fill: currentColor
+  margin: 8px
+  width: 32px
+
+  &.-instagram
+    fill: $dark-grey
+
+  &.-facebook
+    fill: $facebookBlue
+
+  &.-twitter
+    fill: $twitterBlue
+
+  // 2 Dynamic colors + hard coded colors!
+  &.-viget
+    color: $vigetOrange // little circle
+    fill: $vigetBlue // big circle
+    width: 180px
+    // Viget text color hard coded in svg fill attribute
+Status API Training Shop Blog About Pricing

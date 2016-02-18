@@ -1,0 +1,46 @@
+.e-page-title
+  $size: $font_size_xlarge
+  +fontfamily_sansserif_bold
+  +rem("font-size", $size)
+  +rem("letter-spacing", 2px)
+  margin: $size 0 0 0
+  line-height: 1.0
+  color: $color_darkgray
+  a
+    border-bottom: none
+    color: $color_darkgray
+  small
+    $size: $font_size_small
+    +rem("font-size", $size)
+    +fontfamily_sansserif_bold
+    margin: 0 0 0 $size
+    color: $color_darkgray
+
+
+.e-section-title
+  +fontfamily_sansserif_bold
+  +respond-to("small-only")
+    +rem("font-size", $font_size_large)
+  +respond-to("medium-up")
+    +rem("font-size", $font_size_large)
+  +rem("margin", 0)
+
+.e-strong-title
+  +fontfamily_sansserif_bold
+  +respond-to("small-only")
+    +rem("font-size", $font_size_xxlarge)
+  +respond-to("medium-up")
+    +rem("font-size", $font_size_xxlarge)
+  +rem("margin", 0)
+
+.e-section-sub_title
+  +fontfamily_sansserif_bold
+  span
+    +fontfamily_sansserif_bold
+  +respond-to("small-only")
+    +rem("font-size", $font_size_large)
+  +respond-to("medium-up")
+    +rem("font-size", $font_size_large)
+  +rem("margin", 0 0 $section_margin / 2)
+
+

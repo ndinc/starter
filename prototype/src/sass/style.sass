@@ -1,6 +1,75 @@
-// Include this if using an Icon Font
-@import generated/icons
+// Setting
+// @import "compass/css3"
+// @import "compass/utilities"
+@import "foundation/settings"
 
-@import base/colors
-@import base/mixins
-@import base/demo
+// @import "libs/ss-standard/ss-standard"
+// @import "font-awesome-sprockets"
+// @import "font-awesome"
+
+@import "partials/nd/utility"
+@import "partials/nd/respond"
+
+// ・nd は基本編集しません
+// ・プロジェクトも応用できそうな場合は コメントして、miyamoto に asanaで asign
+@import "partials/nd/mixin"
+@import "partials/nd/animation"
+
+// ・基礎系はプロジェクト全体のフォントサイズ、色などの定義
+@import "partials/color"
+@import "partials/font"
+
+// ページ全体のレイアウト
+// グリッド系, 横幅に関する記述
+@import "partials/grid"
+@import "partials/section"
+
+
+// ・nd は基本編集しません
+// ・プロジェクトも応用できそうな場合は コメントして、miyamoto に asanaで asign
+@import "partials/nd/class"
+@import "partials/nd/sprite"
+@import "partials/nd/typography"
+
+
+@mixin cover_image
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+
+
+// ・１ページ内に２回以上使う可能性があるものをモジュールに定義
+// ・モジュールは、m- で始める
+// ・それ以外の sass で .m- を使ってはいけない
+@import "partials/module/parts"
+@import "partials/module/title"
+@import "partials/module/list"
+
+
+
+// 共通セクション
+// 共通化しているセクション
+// @import "partials/section/common"
+
+
+// header, footer に関する sass
+@import "partials/section/header"
+@import "partials/section/footer"
+
+
+////
+// デザインテンプレートごとに用意
+///
+
+// トップページ
+@import "partials/layout/home"
+//固定ページ
+@import "partials/layout/page"
+// 個別ページ
+@import "partials/layout/article"
+
+
+// どこに記述すべきか不明の場合、とりあえずここに。
+// ファルファ版はまずここだけにどんどん記述すれば良い。
+@import "partials/temporary"
+
