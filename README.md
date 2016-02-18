@@ -1,6 +1,6 @@
 #![Gulp Starter](src/images/gulp-starter-logo.png)
 
-Gulp Starter is a delicious blend of tasks and build tools poured into [Gulp](http://gulpjs.com/) to form a full-featured modern asset pipeline. It can be used as-is as a static site builder, or can be configured and integrated into your own development environment and site or app structure. Checkout [`gulpfile.js/extras`](/gulpfile.js/extras) for Rails and Craft configurations.
+Gulp Starter is a delicious blend of tasks and build tools poured into [Gulp](http://gulpjs.com/) to form a full-featured modern asset pipeline. It can be used as-is as a static site builder, or can be configured and integrated into your own development environment and site or app structure. Checkout [`gulpfile/extras`](/gulpfile/extras) for Rails and Craft configurations.
 
 [![Build Status](https://travis-ci.org/vigetlabs/gulp-starter.svg?branch=static-server)](https://travis-ci.org/vigetlabs/gulp-starter)
 
@@ -60,7 +60,7 @@ npm run gulp
 
 (or `npm run development`)
 
-This runs `gulp` from `./node_modules/bin`, using the version installed with this project, rather than a globally installed instance. All commands in the package.json `scripts` work this way. The `gulp` command runs the `default` task, defined in `gulpfile.js/tasks/default.js`.
+This runs `gulp` from `./node_modules/bin`, using the version installed with this project, rather than a globally installed instance. All commands in the package.json `scripts` work this way. The `gulp` command runs the `default` task, defined in `gulpfile/tasks/default.js`.
 
 All files will compile in development mode (uncompressed with source maps). [BrowserSync](http://www.browsersync.io/) will serve up files to `localhost:3000` and will stream live changes to the code and assets to all connected browsers. Don't forget about the additional BrowserSync tools available on `localhost:3001`!
 
@@ -71,7 +71,7 @@ npm run gulp production
 ```
 
 #### Configuration
-Directory and top level settings are convienently exposed in `gulpfile.js/config.json`. All task configuration objects have `src` and `dest` directories specfied. These are relative to `root.src` and `root.dest` respectively. Each configuration also has an extensions array. This is used for file watching, and file deleting/replacing.
+Directory and top level settings are convienently exposed in `gulpfile/config.json`. All task configuration objects have `src` and `dest` directories specfied. These are relative to `root.src` and `root.dest` respectively. Each configuration also has an extensions array. This is used for file watching, and file deleting/replacing.
 
 If there is a feature you do not wish to use on your project, simply delete the configuration, and the task will be skipped.
 
@@ -109,30 +109,30 @@ GitHub Pages isn't the most robust of hosting solutions (you'll eventually run i
 
 #### JS
 ```
-gulpfile.js/tasks/webpackWatch
-gulpfile.js/tasks/webpackProduction
+gulpfile/tasks/webpackWatch
+gulpfile/tasks/webpackProduction
 ```
 Modular ES6 with [Babel](http://babeljs.io/) and [Webpack](http://webpack.github.io/)
 
-I've included various examples of generating mulitple files, async module loading and splitting out shared dependences to show the power of Webpack. Adjust the webpack config (`.gulpfile.js/config/webpack`) to fit your project. For smaller one-pagers, you'll probably want to skip the async stuff, and just compile a single bundle.
+I've included various examples of generating mulitple files, async module loading and splitting out shared dependences to show the power of Webpack. Adjust the webpack config (`.gulpfile/config/webpack`) to fit your project. For smaller one-pagers, you'll probably want to skip the async stuff, and just compile a single bundle.
 
-There are a couple of webpack options exposed in the top-level `gulpfile.js/config.json` file.
+There are a couple of webpack options exposed in the top-level `gulpfile/config.json` file.
 
 `entries`: Discrete js bundle entry points. A js file will be bundled for each item. Paths are relative to the `javascripts` folder. This maps directly to `webpackConfig.entry`.
 
 `extractSharedJs`: Creates a `shared.js` file that contains any modules shared by multiple bundles. Useful on large sites with descrete js running on different pages that may share common modules or libraries. Not typically needed on smaller sites.
 
-If you want to mess with the specifics of the webpack config, check out `gulpfile.js/lib/webpack-multi-config.js`.
+If you want to mess with the specifics of the webpack config, check out `gulpfile/lib/webpack-multi-config.js`.
 
 #### CSS
 ```
-gulpfile.js/tasks/css
+gulpfile/tasks/css
 ```
 Your Sass gets run through Autoprefixer, so don't prefix! The examples use the indented `.sass` syntax, but use whichever you prefer.
 
 #### HTML
 ```
-gulpfile.js/tasks/html
+gulpfile/tasks/html
 ```
 Robust templating with [Nunjucks](https://mozilla.github.io/nunjucks/). Nunjucks is nearly identical in syntax to Twig (PHP), and replaces Swig (and Twig-like js templating language), which is no longer maintained.
 
@@ -140,15 +140,15 @@ A global data file is set up at [src/html/data/global.json](src/html/data/global
 
 #### Fonts
 ```
-gulpfile.js/tasks/fonts
+gulpfile/tasks/fonts
 ```
 All this task does is copy fonts from `./src/fonts` to `./public/fonts`. A sass `+font-face` mixin is included in `./src/stylesheets/base/mixins`.
 
 #### IconFont
 ```
-gulpfile.js/tasks/iconFont
+gulpfile/tasks/iconFont
 ```
-SVGs added to `src/icons` will be automatically compiled into an iconFont, and output to `./public/fonts`. At the same time, a `.sass` file will be output to `src/stylesheets/generated/_icons.sass`. This file contains mixins and classes based on the svg filename. If you want to edit the template that generates this file, it's at `gulpfile.js/tasks/iconFont/template.sass`
+SVGs added to `src/icons` will be automatically compiled into an iconFont, and output to `./public/fonts`. At the same time, a `.sass` file will be output to `src/stylesheets/generated/_icons.sass`. This file contains mixins and classes based on the svg filename. If you want to edit the template that generates this file, it's at `gulpfile/tasks/iconFont/template.sass`
 
 ##### Usage:
 With generated classes:
@@ -182,7 +182,7 @@ With mixins:
 
 #### SVG Sprites
 ```
-gulpfile.js/tasks/svgSprite
+gulpfile/tasks/svgSprite
 ```
 SVGs sprites are super powerful. This particular setup allows styling 2 different colors from your css. You can have unlimited colors hard coded into your svg.
 
@@ -221,7 +221,7 @@ There are some files that belong in your root destination directory that you won
 
 ## Notable changes from 1.0
 - Full asset pipeline and static html compilation
-- `gulpfile.js` is now a directory
+- `gulpfile` is now a directory
 - update directory structure
 - Replaced Browserify with [Webpack](http://webpack.github.io/docs/webpack-for-browserify-users.html)!
   - Async CommonJS module requires
