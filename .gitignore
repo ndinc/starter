@@ -3,6 +3,8 @@
 .publish
 public
 build
+wp
+assets
 dest
 Desktop.ini
 node_modules

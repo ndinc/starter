@@ -6,8 +6,8 @@ var gulp        = require('gulp')
 var path        = require('path')
 
 var paths = {
-  src: path.join(config.root.dest, '/**'),
-  dest: config.root.build
+  src: [path.join(config.root.dest, '/**'), '!' + path.join(config.root.dest, '/**/*.+(html)')],
+  dest: config.root.assets
 }
 
 var copyTask = function() {
