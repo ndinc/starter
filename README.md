@@ -250,6 +250,7 @@ Visit [code.viget.com](http://code.viget.com) to see more projects from [Viget.]
 
 ## Todo
 - デフォルトのモバイルの対応を
+- data/page.json をつくって、OGPなどを反映する
 - テストサーバーへの deploy 対応
 - scaffold の対応
 - wp scaffold の対応
