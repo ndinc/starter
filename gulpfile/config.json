@@ -2,8 +2,7 @@
   "root": {
     "src": "./prototype/src",
     "dest": "./prototype/dest",
-    "build": "./prototype/build",
-    "app": "./public"
+    "assets": "./wp/wp-content/themes/starter/assets"
   },
 
   "tasks": {
