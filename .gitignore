@@ -3,10 +3,10 @@
 .publish
 public
 build
-wp
 assets
 dest
 Desktop.ini
 node_modules
 **/generated/_icons.sass
 npm-debug.log
+password.txt
