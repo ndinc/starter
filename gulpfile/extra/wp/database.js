@@ -12,7 +12,6 @@ var getCreatingDabataseString = function(){
     '-Bse \"CREATE DATABASE '+ options["config"]["dbname"] + '\"'
   ];
   return string.join(' ');
-
 }
 
 var createDatabaseTask = function() {
@@ -25,7 +24,7 @@ var createDatabaseTask = function() {
 
 gulp.task('wp:db:create', createDatabaseTask)
 
-var createDatabaseTask = function() {
+var pushDatabaseStagingTask = function() {
   return gulp.src('')
     .pipe(exec(['mysql', getCreatingDabataseString()].join(' ') , options))
     .on('end', function(){
@@ -33,6 +32,7 @@ var createDatabaseTask = function() {
     })
 }
 
-gulp.task('wp:db:create', createDatabaseTask)
+gulp.task('wp:db:push', pushDatabaseStagingTask)
+gulp.task('wp:db:push:staging', pushDatabaseStagingTask)
 
 // mysql -u root -proot -h localhost -Bse "CREATE DATABASE wp_test";

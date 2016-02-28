@@ -1,8 +1,8 @@
-var config  = require('../config')
+var config  = require('../../config')
 var gulp    = require('gulp')
 var gulpSequence = require('gulp-sequence')
 var exec = require('gulp-exec');
-var package = require('../../package.json')
+var package = require('../../../package.json')
 var path    = require('path')
 
 var options = {
