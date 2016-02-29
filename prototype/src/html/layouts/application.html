@@ -11,6 +11,7 @@
   <title>{% block title %}Defaults Title{% endblock %}</title>
   <link rel="stylesheet" href="stylesheets/foundation.css">
   <link rel="stylesheet" href="stylesheets/style.css">
+  {% block stylesheet %}{% endblock %}
   {% block head %}
   <meta name="description" content="Dedault description">
   <meta name="keywords" content="{{ socialLinks[0].id }}">
