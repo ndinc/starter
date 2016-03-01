@@ -49,10 +49,15 @@ gulp.task('wp:config', configTask)
 
 var installTask = function() {
   return gulp.src('')
-    .pipe(exec(['wp core install', getOptionString('install')].join(' ') , options))
-    .pipe(exec(['echo', options['install']['admin_password'], '>> password.txt'].join(' ') , options))
+    // .pipe(exec(['wp core install', getOptionString('install')].join(' ') , options))
+    .pipe(exec(['echo', 'user: ', options['install']['admin_user'], '>> password.txt'].join(' ') , options))
+    .pipe(exec(['echo', 'pwd: ', options['install']['admin_password'], '>> password.txt'].join(' ') , options))
     .on('end', function(){
-      console.log('end');
+      console.log('------- wordpress information ------\n');
+      console.log('user: ' + options['install']['admin_user']);
+      console.log('pwd: ' + options['install']['admin_password'] + '\n');
+      console.log('warning: Don\'t push password.txt' + '\n');
+      console.log('------------------------------------');
     })
 }
 gulp.task('wp:install', installTask)

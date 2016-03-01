@@ -1,5 +1,6 @@
 var config       = require('../../config')
 var package = require('../../../package.json')
+var randomstring = require("randomstring");
 
 var options = {
   "download": {
@@ -23,7 +24,7 @@ var options = {
     "url": "http://localhost:8888",
     "title": package.name,
     "admin_user": "master",
-    "admin_password": 'aaaaaa',
+    "admin_password": randomstring.generate(12),
     "admin_email": "nd.miyamoto+wp@gmail.com",
   },
   "media": {
