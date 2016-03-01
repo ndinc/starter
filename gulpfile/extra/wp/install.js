@@ -29,33 +29,31 @@ var getOptionString = function(task){
 var downloadTask = function() {
   return gulp.src('')
     .pipe(exec(['mkdir','-p', config.root.public].join(' ') , options))
-    .pipe(exec(['rm','-fr', config.root.public + '/wp-config.php'].join(' ') , options))
+    .pipe(exec(['mkdir','-p', options.download.path].join(' ') , options))
     .pipe(exec(['wp core download', getOptionString('download')].join(' ') , options))
     .on('end', function(){
-      console.log('end');
     })
 }
 gulp.task('wp:download', downloadTask)
 
 var configTask = function() {
   return gulp.src('')
-    .pipe(exec(['rm','-fr', config.root.public + '/wp-config.php'].join(' ') , options))
+    .pipe(exec(['rm','-fr', options.config.path + '/wp-config.php'].join(' ') , options))
     .pipe(exec(['wp core config', getOptionString('config')].join(' ') , options))
     .on('end', function(){
-      console.log('end');
     })
 }
 gulp.task('wp:config', configTask)
 
 var installTask = function() {
   return gulp.src('')
-    // .pipe(exec(['wp core install', getOptionString('install')].join(' ') , options))
-    .pipe(exec(['echo', 'user: ', options['install']['admin_user'], '>> password.txt'].join(' ') , options))
-    .pipe(exec(['echo', 'pwd: ', options['install']['admin_password'], '>> password.txt'].join(' ') , options))
+    .pipe(exec(['wp core install', getOptionString('install')].join(' ') , options))
+    .pipe(exec(['echo', 'user: ', options.install.admin_user, '>> password.txt'].join(' ') , options))
+    .pipe(exec(['echo', 'pwd: ', options.install.admin_password, '>> password.txt'].join(' ') , options))
     .on('end', function(){
       console.log('------- wordpress information ------\n');
-      console.log('user: ' + options['install']['admin_user']);
-      console.log('pwd: ' + options['install']['admin_password'] + '\n');
+      console.log('user: ' + options.install.admin_user);
+      console.log('pwd: ' + options.install.admin_password + '\n');
       console.log('warning: Don\'t push password.txt' + '\n');
       console.log('------------------------------------');
     })
@@ -64,15 +62,14 @@ gulp.task('wp:install', installTask)
 
 var optionTask = function() {
   return gulp.src('')
-    .pipe(exec('wp rewrite structure \"/%postname%/\"', options))
-    .pipe(exec('wp option update thumbnail_size_w ' + options['media']['thumbnail']['w'], options))
-    .pipe(exec('wp option update thumbnail_size_h ' + options['media']['thumbnail']['h'], options))
-    .pipe(exec('wp option update medium_size_w ' + options['media']['medium']['w'], options))
-    .pipe(exec('wp option update medium_size_h ' + options['media']['medium']['h'], options))
-    .pipe(exec('wp option update large_size_w ' + options['media']['large']['w'], options))
-    .pipe(exec('wp option update large_size_h ' + options['media']['large']['h'], options))
+    .pipe(exec('wp rewrite structure \"/%postname%/\" --path=' + options.download.path, options))
+    .pipe(exec('wp option update thumbnail_size_w ' + options.media.thumbnail.w + ' --path=' + options.download.path, options))
+    .pipe(exec('wp option update thumbnail_size_h ' + options.media.thumbnail.h + ' --path=' + options.download.path, options))
+    .pipe(exec('wp option update medium_size_w ' + options.media.medium.w + ' --path=' + options.download.path, options))
+    .pipe(exec('wp option update medium_size_h ' + options.media.medium.h + ' --path=' + options.download.path, options))
+    .pipe(exec('wp option update large_size_w ' + options.media.large.w + ' --path=' + options.download.path, options))
+    .pipe(exec('wp option update large_size_h ' + options.media.large.h + ' --path=' + options.download.path, options))
     .on('end', function(){
-      console.log('end');
     })
 }
 gulp.task('wp:option', optionTask)

@@ -6,11 +6,12 @@ var wordpressTask = function(cb) {
     'wp:download',
     'wp:config',
     'wp:db:create',
-    'wp:install',
     'wp:directory',
+    'wp:install',
     'wp:plugin',
     'wp:theme',
     'wp:option',
+    'wp:production',
   cb);
 }
 

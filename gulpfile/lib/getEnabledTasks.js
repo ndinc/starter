@@ -9,7 +9,8 @@ module.exports = function(env) {
   var jsTasks = {
     watch: 'webpack:watch',
     development: 'webpack:watch',
-    production: 'webpack:production'
+    production: 'webpack:production',
+    wordpress: 'webpack:wordpress'
   }
 
   var matchFilter = function(task) {
