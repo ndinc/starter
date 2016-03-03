@@ -10,3 +10,4 @@ node_modules
 **/generated/_icons.sass
 npm-debug.log
 password.txt
+server.config.js

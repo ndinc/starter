@@ -6,6 +6,17 @@
   },
 
   "tasks": {
+    "deploy": {
+      "exclude_glob": [
+        ".DS_Store",
+        ".sublime-project",
+        ".sublime-workspace",
+        ".htaccess",
+        ".htpasswd"
+      ],
+      "pretasks": ["wp:production"],
+      "tasks": ["deploy:ftp"]
+    },
     "browserSync": {
       "server": {
         "baseDir": "prototype/dest"
