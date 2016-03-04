@@ -1,6 +1,98 @@
+$hamburget_width: 220px
+
 .m-header_nav
-  display: inline-block
-  margin: 0 -10px
-  li
-    display: inline-block
-    padding: 0 10px
+  .m-hamburger_btn
+    display: none
+  +respond-to("medium-up")
+    ul
+      display: inline-block
+      margin: 0 -10px
+      li
+        display: inline-block
+        padding: 0 10px
+  +respond-to("small-only")
+    display: none
+
+
+#container
+  transition: all 0.4s ease
+  .is-active_hamburger &
+    transform: translate($hamburget_width, 0)
+    overflow: hidden
+
+.is-active_hamburger
+  width: 100%
+  overflow: hidden
+
+.m-hamburger_content
+  +respond-to("medium-up")
+    display: none
+  position: fixed
+  z-index: 5000
+  top: 0
+  left: 0
+  z-index: 0
+  width: 100%
+  height: 100%
+  padding: 75px 25px 0
+  background: lighten($color_darkgray, 0%)
+  width: $hamburget_width
+  ul
+    li
+      padding: 15px 0
+      line-height: 1.8
+      + li
+        border-top: 1px solid #fff
+
+    a
+      color: $color_white
+
+.m-hamburger_btn
+  +respond-to("medium-up")
+    display: none
+  $bar_color: $color_black
+  cursor: pointer
+  width: 40px
+  height: 40px
+  display: block
+  +mcfix
+  position: fixed
+  z-index: 5001
+  top: 25px
+  left: 25px
+  & > div
+    background: $bar_color
+    height: 5px
+    line-height: 1
+    margin-bottom: 6px
+    float: left
+    width: 100%
+  & > div:nth-child(1),
+  & > div:nth-child(3)
+    float: right
+  .is-active_hamburger &
+    transition: all 0.4s ease
+    transform: scale(1) rotate(180deg) translate(0, 4px)
+    & > div
+      transition: all 0.4s ease
+      background: #fff
+    & > div:nth-child(1),
+    & > div:nth-child(3)
+      width: 65%
+
+    & > div:nth-child(2)
+      width: 90%
+
+    & > div:nth-child(1)
+      transform: scale(1) rotate(45deg) translate(2px, 2px)
+    & > div:nth-child(3)
+      transform: scale(1) rotate(-45deg) translate(2px, -2px)
+
+  .is-active_hamburger.is-active_end
+    transform: scale(1) rotate(360deg) translate(0, 0)
+    & > div
+      width: 100%
+    & > div:nth-child(1)
+      transform: scale(1) rotate(0deg) translate(0, 0)
+    & > div:nth-child(3)
+      transform: scale(1) rotate(0deg) translate(0, 0)

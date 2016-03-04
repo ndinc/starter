@@ -25,6 +25,9 @@ class App {
 
   common_scripts(){
     // common scripts
+    const Hamburger = require('./async/hamburger.js')
+    const hamburger = new Hamburger()
+
     console.log('common scripts here !');
   }
 }
