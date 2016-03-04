@@ -9,8 +9,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>TEST</title>
-  <link rel="stylesheet" href="stylesheets/foundation-10c6fe2362.css">
-  <link rel="stylesheet" href="stylesheets/style-e2015ebb0c.css">
+  <link rel="stylesheet" href="stylesheets/foundation-a776fe5b88.css">
+  <link rel="stylesheet" href="stylesheets/app-3eba279044.css">
+  
+<link rel="stylesheet" href="stylesheets/about-eb45c3f457.css">
+
   
   <meta name="description" content="Dedault description">
   <meta name="keywords" content="twitter">
@@ -31,50 +34,257 @@
   <meta name="twitter:domain" content="TWITTER DOMAIN">
   
   <!-- http://realfavicongenerator.net/ is the best! -->
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#cd4749">
+<link rel="apple-touch-icon" sizes="57x57" href="logos/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="logos/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="logos/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="logos/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="logos/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="logos/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="logos/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="logos/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="logos/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="logos/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="logos/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="logos/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="logos/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="logos/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="manifest.json">
+<link rel="mask-icon" href="logos/safari-pinned-tab.svg" color="#cd4749">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 <meta name="theme-color" content="#cd4749">
 
 </head>
-<body data-page-id="about">
+<body class="about" >
   <div id="container">
       <header id="header" class="s-header">
-    <nav class="m-nav">
-  <p><a href="index.html">page 1</a> <a href="about.html">page 2</a></p>
-</nav>
-
+    <section class="page-section has-background">
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns">
+          <section class="s-header_title content-section">
+            <h1 class="e-header_title">Starter</h1>
+            <p class="e-header_description">This is starter template created by nD inc.</p>
+          </section>
+          <section class="content-section m-header_nav" js-hamburger>
+            <a href="javascript:void(0)" class="m-hamburger_btn" js-hamburger_btn>
+              <div></div><div></div><div></div>
+            </a>
+            <nav class="m-hamburger_content" js-hamburger_content>
+              <ul class="">
+                <li><a href="/">Home</a></li>
+                <li><a href="/article.html">Article</a></li>
+                <li><a href="/about.html">About</a></li>
+              </ul>
+            </nav>
+          </section>
+        </div>
+      </div>
+    </section>
   </header><!-- /header -->
-
     
-  I am page 2, and have different javascript.
+<section id="main" class="l-{layout_template_name} l-{layout_template_name}-{page_name}">
+  #main の 直下には .page-section / .page-header / .page-footer がきます。<br>
+  .page-section は .row / row-full などの親になります。<br>
+  .各ページによるレイアウトの違いは .l-{layout_template_name} で区別します。
+  <header class="s-{section_template_name} page-header">
+    <div class="row">
+      <div class="columns">
+        <h1 class="e-page_title">h1.page_title</h1>
+      </div>
+    </div>
+  </header>
+  <section class="s-{section_template_name} page-section">
+    <div class="row">
+      <div class="columns">
+        .row / row-full などの子に .content-section / .content-header / .content-footer がきます。<br>
+        各セクションによるレイアウトの違いは .s-{section_template_name} で区別します。
+        <header class="content-header">
+          <h2 class="section-title">h2.section-title</h2>
+        </header>
+        <section class="content-section">
+          <p>content-section</p>
+          <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+            
+            <li class="m-{module-name} ">
+              m-{module-name}
+            </li>
+            
+            <li class="m-{module-name} ">
+              m-{module-name}
+            </li>
+            
+            <li class="m-{module-name} ">
+              m-{module-name}
+            </li>
+            
+            <li class="m-{module-name} ">
+              m-{module-name}
+            </li>
+            
+            <li class="m-{module-name} ">
+              m-{module-name}
+            </li>
+            
+            <li class="m-{module-name} ">
+              m-{module-name}
+            </li>
+            
+            <li class="m-{module-name} ">
+              m-{module-name}
+            </li>
+            
+            <li class="m-{module-name} ">
+              m-{module-name}
+            </li>
+            
+            <li class="m-{module-name} ">
+              m-{module-name}
+            </li>
+            
+            <li class="m-{module-name} ">
+              m-{module-name}
+            </li>
+            
+            <li class="m-{module-name} ">
+              m-{module-name}
+            </li>
+            
+            <li class="m-{module-name} ">
+              m-{module-name}
+            </li>
+            
 
-      <footer>
-    <p>Made with ♥ at <br><a href="http://viget.com">
+          </ul>
+        </section>
+        <section class="content-section">
+          <p>content-section</p>
+          <img src="images/gulp-743c01b886.png" alt="gulp.js">
+          <h4>Ubiquitous Social Icons!</h4>
+          <p class="social-icons">
+  As an icon font...
+
   
-  <span class='sprite -viget '>
-    <svg viewBox="0 0 500 182"><use xlink:href='images/sprites.svg#viget' /></use></svg>
+    <a class="icon -twitter" href="https://twitter.com/viget">
+      <span class="screenreader">Twitter</span>
+    </a>
+  
+    <a class="icon -facebook" href="https://www.facebook.com/vigetlabs">
+      <span class="screenreader">Facebook</span>
+    </a>
+  
+    <a class="icon -instagram" href="https://instagram.com/viget">
+      <span class="screenreader">Instagram</span>
+    </a>
+  
+</p>
+
+          
+<p class="social-icons">
+
+  
+    <a href="https://twitter.com/viget">
+      
+  
+  <span class='sprite -twitter '>
+    <svg viewBox="0 0 1 1"><use xlink:href='images/sprites-0325b3f89a.svg#twitter' /></use></svg>
   </span>
-</a></p>
+
+    </a>
+  
+    <a href="https://www.facebook.com/vigetlabs">
+      
+  
+  <span class='sprite -facebook '>
+    <svg viewBox="0 0 1 1"><use xlink:href='images/sprites-0325b3f89a.svg#facebook' /></use></svg>
+  </span>
+
+    </a>
+  
+    <a href="https://instagram.com/viget">
+      
+  
+  <span class='sprite -instagram '>
+    <svg viewBox="0 0 1 1"><use xlink:href='images/sprites-0325b3f89a.svg#instagram' /></use></svg>
+  </span>
+
+    </a>
+  
+    ...or svg sprites!
+</p>
+
+          <button id="button">Manually Load Async Module</button>
+          <p data-module="Highlight">An auto-loaded async module highlighted this!</p>
+        </section>
+        <footer class="content-footer">
+          <p>footer-footer</p>
+        </footer>
+      </div>
+    </div>
+    <!-- or -->
+    <div class="row-full">
+      <div class="columns">
+        <section class="content-section">
+          <p>row-full</p>
+          <p>content-section</p>
+        </section>
+      </div>
+    </div>
+    <!-- or -->
+    <div class="row row-large-up">
+      <div class="columns">
+        <section class="content-section">
+          <p>row-large-up</p>
+          <p>content-section</p>
+        </section>
+      </div>
+    </div>
+  </section>
+  <section class="s-{section_template_name} page-section">
+    <div class="row">
+      <div class="columns">
+        .row / row-full などの子に .content-section / .content-header / .content-footer がきます。<br>
+        各セクションによるレイアウトの違いは .s-{section_template_name} で区別します。
+        <header class="content-header">
+          <h2 class="section-title">h2.section-title</h2>
+        </header>
+        <section class="content-section">
+          <div class="row">
+            <div class="small-6 medium-6 large-6 columns">
+              <p>content-section</p>
+            </div>
+            <div class="small-6 medium-6 large-6 columns">
+              <p>content-section</p>
+            </div>
+          </div>
+        </section>
+        <section class="content-section">
+          <p>content-section</p>
+        </section>
+        <section class="content-section">
+          <p>content-section</p>
+        </section>
+        <footer class="content-footer">
+          <p>footer-footer</p>
+        </footer>
+      </div>
+    </div>
+  </section>
+</section>
+
+      <footer id="footer" class="s-footer">
+    <section class="page-section has-background">
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns">
+          <section class="section-content">
+            <p>Made at <a href="http://ndinc.jp">ndinc</a></p>
+          </section>
+        </div>
+      </div>
+    </section>
   </footer>
   </div>
-  <script src="javascripts/shared-be8f3d20fb6f1224081e.js"></script>
-  <script src="javascripts/app-be8f3d20fb6f1224081e.js"></script>
+  <script src="javascripts/shared-5268720383da3ee7ba05.js"></script>
+  <script src="javascripts/app-5268720383da3ee7ba05.js"></script>
   
 
 </body>
