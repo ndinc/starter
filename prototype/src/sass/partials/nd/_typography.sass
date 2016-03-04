@@ -1,11 +1,8 @@
-
-
 body
   +fontfamily_sansserif
   -webkit-font-smoothing: antialiased
   text-rendering: optimizeSpeed
-  *
-    +fontfamily_sansserif
+  line-height: 1.8em
 a
   color: $link_color
   -webkit-transition: all .1s ease
@@ -17,7 +14,7 @@ a
 p
   color: $text_color
   +fontfamily_sansserif
-  +rem("margin", $size * 1.2 0)
+  +rem("margin", $size 0)
   +rem("font-size", $size)
   +rem("line-height", $size * 1.8)
   +rem("letter-spacing", 2px)
@@ -50,7 +47,6 @@ dl
     +rem("margin", $size * 2 0 $size * .5 0)
     +rem("font-size", $size)
     +rem("line-height", $size * 1.2)
-    // +rem("letter-spacing", 2px)
     &:first-child
       margin-top: 0
   dd
@@ -59,23 +55,57 @@ dl
       margin: 0
       letter-spacing: 0
 
-ul
+ul, ol
   margin: 0
+  padding: 0
 
 li
   list-style: none
+  a
+    text-decoration: none
 
 
+// 記事内の文章の typography はこちら
+.m-content
+  $size: $font_size_medium * 1.2
+  h2
+    +rem("margin", $size 0)
+    line-height: 2
+  p
+    +rem("margin", $size 0)
+    line-height: 2
 
 
-.article_detail_xyzzyx
-  $size: $font_size_small
-  +fontfamily_sansserif
-  +rem("margin", $size 0 $size * .5 0)
-  +rem("font-size", $size)
-  +rem("line-height", $size * 1.6)
-  // color: #666
-  color: #000
-  letter-spacing: 0
-  opacity: 0.8
+  strong
+  em
+  del
+    // text-decoration: line-through
+  blockquote
+    border-left: 2px solid $color_gray
+    padding: $size 0 $size $size * 2
+    margin: $size 0
+    -webkit-margin-start: 0px
+    -webkit-margin-end: 0px
+    position: relative
+    // &:before
+    //   content: attr(cite)
+    //   position: absolute
+    //   right: 0
+    //   bottom: 0
+    //   color: $color_gray
+    p:first-child
+      margin-top: 0
+    p:last-child
+      margin-bottom: 0
 
+  ul,ol
+    padding-left: $size * 1.2
+  ul
+    li
+      list-style-type: disc
+  ol
+    li
+      list-style-type: decimal
+
+  a
+    text-decoration: underline

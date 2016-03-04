@@ -1,4 +1,22 @@
 .m-list-article
-  h1
+  > a
+    display: block
+  .title
     +rem("font-size", $font_size_medium)
+    +rem("margin", 10px 0 0)
     color: $color_gray
+  .date
+    +rem("font-size", $font_size_small)
+    color: $color_gray
+    // line-height: 1
+    margin: 0
+
+
+
+.m-text_list
+  li
+    text-decoration: none
+    // margin-bottom: $size / 2
+    // &:last-child
+    //   margin-bottom: 0
+

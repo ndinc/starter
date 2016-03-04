@@ -1,20 +1,26 @@
-
 // ---------------------------------------------------------------
 //color
 // ---------------------------------------------------------------
-$color_theme: #f0810b
 
+// Set color name
+$color_white: #fff
 $color_darkgray: #333
 $color_gray: #999
-$color_lightgray: #e1e1e1
+$color_lightgray: #f3f3f3
+$color_black: #111
+$color_red: #ff605b
+$color_orange: #f0810b
+$color_blue: #008CBA
+$color_green: #94d045
+
+// Set key color
+$key_color: $color_orange
+$key-color: $color_orange
 
 
-$link_color: $color_theme
-$hover_color: lighten($color_theme, 3%)
-$visited_color: darken($color_theme, 3%)
-
-$text_color: #333
-$bg_color: #fff
-
-$key_red_color: #ff605b
-$key_color: #94d045
+// Set css color
+$text_color: $color_darkgray
+$bg_color: $color_lightgray
+$link_color: $key_color
+$hover_color: lighten($key_color, 3%)
+$visited_color: darken($key_color, 3%)
