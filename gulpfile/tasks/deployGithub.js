@@ -22,5 +22,5 @@ var deployTask = function() {
     })
 }
 
-gulp.task('deploy', ['production'], deployTask)
+gulp.task('deploy:github', ['production'], deployTask)
 module.exports = deployTask
