@@ -17,6 +17,12 @@
       "pretasks": ["wp:production"],
       "tasks": ["deploy:ftp"]
     },
+
+    "exec": {
+      "maxBuffer": "600*1024",
+      "pipeStdout": true
+    },
+
     "browserSync": {
       "server": {
         "baseDir": "prototype/dest"

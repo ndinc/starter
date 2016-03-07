@@ -19,9 +19,9 @@ var reportOptions = {
 var installTask = function(cb) {
   // gulpSequence('wp:install', cb)
   // return gulp.src('')
-  //   .pipe(exec('chmod +x scripts/*.sh', options))
-  //   .pipe(exec('scripts/test.sh 1', options))
-  //   .pipe(exec(['mv', package.name, package.name].join(' ') , options))
+  //   .pipe(exec('chmod +x scripts/*.sh', config.tasks.exec))
+  //   .pipe(exec('scripts/test.sh 1', config.tasks.exec))
+  //   .pipe(exec(['mv', package.name, package.name].join(' ') , config.tasks.exec))
   //   .pipe(exec.reporter(reportOptions))
   //   .on('end', function(){
   //     console.log('end');

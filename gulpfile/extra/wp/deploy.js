@@ -40,7 +40,7 @@ var deployTask = function(d){
         path.join(config.root.public, dir),
         path.join(server.path, dir) + ';',
         'bye;\"'
-      ].join(' '), {maxBuffer: 600*1024, pipeStdout: true}))
+      ].join(' '), config.tasks.exec))
       .pipe(exec.reporter())
       .on('end', function(){
         console.log('end');

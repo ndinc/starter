@@ -7,11 +7,11 @@ var exec = require('gulp-exec');
 
 var gitInitTask = function() {
   return gulp.src('')
-    .pipe(exec('rm -rf .git', options))
-    .pipe(exec('git flow init -d', options))
-    .pipe(exec('git remote add origin git@github.com:ndinc/' + package.name + '.git', options))
-    .pipe(exec('git add --all', options))
-    .pipe(exec('git commit -am "Initial commit"', options))
+    .pipe(exec('rm -rf .git', config.tasks.exec))
+    .pipe(exec('git flow init -d', config.tasks.exec))
+    .pipe(exec('git remote add origin git@github.com:ndinc/' + package.name + '.git', config.tasks.exec))
+    .pipe(exec('git add --all', config.tasks.exec))
+    .pipe(exec('git commit -am "Initial commit"', config.tasks.exec))
     .on('end', function(){
       console.log('end');
     })
@@ -21,11 +21,11 @@ gulp.task('git:init', gitInitTask)
 
 var gitPushTask = function() {
   return gulp.src('')
-    .pipe(exec('rm -rf .git', options))
-    .pipe(exec('git flow init -d', options))
-    .pipe(exec('git remote add origin git@github.com:ndinc/' + package.name + '.git', options))
-    .pipe(exec('git add --all', options))
-    .pipe(exec('git commit -am "Initial commit"', options))
+    .pipe(exec('rm -rf .git', config.tasks.exec))
+    .pipe(exec('git flow init -d', config.tasks.exec))
+    .pipe(exec('git remote add origin git@github.com:ndinc/' + package.name + '.git', config.tasks.exec))
+    .pipe(exec('git add --all', config.tasks.exec))
+    .pipe(exec('git commit -am "Initial commit"', config.tasks.exec))
     .on('end', function(){
       console.log('end');
     })

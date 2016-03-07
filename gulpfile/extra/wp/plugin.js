@@ -28,11 +28,11 @@ var plugins = {
 
 var pluginTask = function() {
   return gulp.src('')
-    .pipe(exec('wp plugin activate wp-multibyte-patch --path=' + options.download.path, options))
-    .pipe(exec('wp plugin install ' + plugins.activate.join(' ') + ' --activate --path=' + options.download.path, options))
-    .pipe(exec('wp plugin install ' + plugins.install.join(' ') + ' --path=' + options.download.path, options))
-    .pipe(exec('wp plugin uninstall hello --path=' + options.download.path, options))
-    .pipe(exec('wp plugin update --all --path=' + options.download.path, options))
+    .pipe(exec('wp plugin activate wp-multibyte-patch --path=' + options.download.path, config.tasks.exec))
+    .pipe(exec('wp plugin install ' + plugins.activate.join(' ') + ' --activate --path=' + options.download.path, config.tasks.exec))
+    .pipe(exec('wp plugin install ' + plugins.install.join(' ') + ' --path=' + options.download.path, config.tasks.exec))
+    .pipe(exec('wp plugin uninstall hello --path=' + options.download.path, config.tasks.exec))
+    .pipe(exec('wp plugin update --all --path=' + options.download.path, config.tasks.exec))
     .on('end', function(){
     })
 }

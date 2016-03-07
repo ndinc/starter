@@ -16,7 +16,7 @@ var getCreatingDabataseString = function(){
 
 var createDatabaseTask = function() {
   return gulp.src('')
-    .pipe(exec(['mysql', getCreatingDabataseString()].join(' ') , options))
+    .pipe(exec(['mysql', getCreatingDabataseString()].join(' ') , config.tasks.exec))
     .on('end', function(){
       console.log('end');
     })
@@ -26,7 +26,7 @@ gulp.task('wp:db:create', createDatabaseTask)
 
 var pushDatabaseStagingTask = function() {
   return gulp.src('')
-    .pipe(exec(['mysql', getCreatingDabataseString()].join(' ') , options))
+    .pipe(exec(['mysql', getCreatingDabataseString()].join(' ') , config.tasks.exec))
     .on('end', function(){
       console.log('end');
     })
