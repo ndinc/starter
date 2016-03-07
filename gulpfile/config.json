@@ -61,7 +61,7 @@
         "collapseWhitespace": true
       },
       "extensions": ["html", "json"],
-      "excludeFolders": ["sections", "modules", "includes", "helpers", "layouts", "data"]
+      "excludeFolders": ["sections", "modules", "includes", "helpers", "layouts"]
     },
 
     "images": {

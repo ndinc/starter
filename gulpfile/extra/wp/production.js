@@ -5,7 +5,7 @@ var getEnabledTasks = require('../../lib/getEnabledTasks')
 
 var productionTask = function(cb) {
   var tasks = getEnabledTasks('wordpress')
-  gulpSequence('clean', tasks.assetTasks, tasks.codeTasks, 'rev', 'static', 'wp:copy', cb)
+  gulpSequence('clean', tasks.assetTasks, tasks.codeTasks, 'rev', 'static', 'wp:data', 'wp:copy', cb)
 }
 
 gulp.task('wp:production', productionTask)
