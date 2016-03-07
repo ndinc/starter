@@ -53,7 +53,10 @@
     "html": {
       "src": "html",
       "dest": "./",
-      "dataFile": "data/global.json",
+      "dataFile": [
+        "data/domain.json",
+        "data/global.json"
+      ],
       "htmlmin": {
         "collapseWhitespace": true
       },

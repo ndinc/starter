@@ -19,8 +19,19 @@ var paths = {
 }
 
 var getData = function(file) {
-  var dataPath = path.resolve(config.root.src, config.tasks.html.src, config.tasks.html.dataFile)
-  return JSON.parse(fs.readFileSync(dataPath, 'utf8'))
+  dataFile = config.tasks.html.dataFile;
+  if(dataFile instanceof Array){
+    var data = {}
+    for (i = 0; i < dataFile.length; i++) {
+      var dataPath = path.resolve(config.root.src, config.tasks.html.src, dataFile[i])
+      var name = dataFile[i].split('/').pop().replace('.json', '')
+      data[ name ] = JSON.parse(fs.readFileSync(dataPath, 'utf8'))
+    }
+    return data
+  }else{
+    var dataPath = path.resolve(config.root.src, config.tasks.html.src, dataFile)
+    return JSON.parse(fs.readFileSync(dataPath, 'utf8'))
+  }
 }
 
 var htmlTask = function() {
