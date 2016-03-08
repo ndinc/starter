@@ -20,8 +20,6 @@ function get_routing_path(){
     }
   }else if(is_search()){
     $page_path = $dir."pages/search.php";
-  }else if(is_static()){
-    $page_path = get_static_file_path();
   }else if(is_404()){
     $page_path = $dir."pages/404.php";
   }else{

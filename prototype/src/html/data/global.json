@@ -1,19 +1,148 @@
 {
-  "socialLinks": [
-    {
-      "id": "twitter",
-      "title": "Twitter",
-      "url": "https://twitter.com/viget"
+  "domain": {
+    "develop": [
+      "http://localhost:3000",
+      "http://localhost:8001"
+    ],
+    "staging": "http://starter.ndv.com",
+    "production": "http://starter.com"
+  },
+  "meta": {
+    "title": "Starter",
+    "description": "nD starter template",
+    "keywords": "nD,gulp,starter,template",
+    "site_name": "Starter",
+    "url": "http://starter.com",
+    "image": "images/ogp.png",
+    "twitter": "@ndinc",
+    "google_analytics": "UA-XXXXXXXX-1",
+    "pages": {
+      "404": {
+        "title": "Not Found | Starter",
+        "description": "nD starter template",
+        "keywords": "nD,gulp,starter,template 404",
+        "og:title": "Not Found | Starter",
+        "og:description": "nD starter template",
+        "og:site_name": "Starter",
+        "og:url": "http://starter.com/",
+        "og:image": "images/ogp.png",
+        "og:type": "article",
+        "twitter:card": "summary_large_image",
+        "twitter:site": "@ndinc",
+        "twitter:title": "Not Found | Starter",
+        "twitter:description": "nD starter template",
+        "twitter:image:src": "images/ogp.png"
+      },
+      "home": {
+        "title": "Starter",
+        "description": "nD starter template",
+        "keywords": "nD,gulp,starter,template",
+        "og:title": "Starter",
+        "og:description": "nD starter template",
+        "og:site_name": "Starter",
+        "og:url": "http://starter.com",
+        "og:image": "images/ogp.png",
+        "og:type": "website",
+        "twitter:card": "summary_large_image",
+        "twitter:site": "@ndinc",
+        "twitter:title": "Starter",
+        "twitter:description": "nD starter template",
+        "twitter:image:src": "images/ogp.png"
+      },
+      "about": {
+        "title": "アバウト | Starter",
+        "description": "nD starter template",
+        "keywords": "nD,gulp,starter,template",
+        "og:title": "アバウト | Starter",
+        "og:description": "nD starter template",
+        "og:site_name": "Starter",
+        "og:url": "http://starter.com/about",
+        "og:image": "images/ogp.png",
+        "og:type": "article",
+        "twitter:card": "summary_large_image",
+        "twitter:site": "@ndinc",
+        "twitter:title": "アバウト | Starter",
+        "twitter:description": "nD starter template",
+        "twitter:image:src": "images/ogp.png"
+      }
     },
-    {
-      "id": "facebook",
-      "title": "Facebook",
-      "url": "https://www.facebook.com/vigetlabs"
+    "single": {
+      "title": "{{db|single-title}} | Starter",
+      "description": "{{db|single-description}}",
+      "keywords": "nD,gulp,starter,template",
+      "og:title": "{{db|single-title}} | Starter",
+      "og:description": "{{db|single-description}}",
+      "og:site_name": "Starter",
+      "og:url": "{{db|single-url}}",
+      "og:image": "{{db|single-image}}",
+      "og:type": "article",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@ndinc",
+      "twitter:title": "{{db|single-title}} | Starter",
+      "twitter:description": "{{db|single-description}}",
+      "twitter:image:src": "images/ogp.png"
     },
-    {
-      "id": "instagram",
-      "title": "Instagram",
-      "url": "https://instagram.com/viget"
+    "taxonomy": {
+      "title": "{{db|taxonomy-title}} | Starter",
+      "description": "{{db|taxonomy-description}}",
+      "keywords": "nD,gulp,starter,template,{{db|taxonomy-title}}",
+      "og:title": "{{db|taxonomy-title}} | Starter",
+      "og:description": "{{db|taxonomy-description}}",
+      "og:site_name": "Starter",
+      "og:url": "{{db|taxonomy-url}}",
+      "og:image": "{{db|taxonomy-image}}",
+      "og:type": "article",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@ndinc",
+      "twitter:title": "{{db|taxonomy-title}} | Starter",
+      "twitter:description": "{{db|taxonomy-description}}",
+      "twitter:image:src": "images/ogp.png"
+    },
+    "archive": {
+      "title": "{{db|archive-title}} | Starter",
+      "description": "{{db|archive-description}}",
+      "keywords": "nD,gulp,starter,template,{{db|archive-title}}",
+      "og:title": "{{db|archive-title}} | Starter",
+      "og:description": "{{db|archive-description}}",
+      "og:site_name": "Starter",
+      "og:url": "{{db|archive-url}}",
+      "og:image": "{{db|archive-image}}",
+      "og:type": "article",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@ndinc",
+      "twitter:title": "{{db|archive-title}} | Starter",
+      "twitter:description": "{{db|archive-description}}",
+      "twitter:image:src": "images/ogp.png"
+    },
+    "search": {
+      "title": "Search Result: {{db|search-title}} | Starter",
+      "description": "{{db|search-description}}",
+      "keywords": "nD,gulp,starter,template,{{db|search-title}}",
+      "og:title": "Search Result: {{db|search-title}} | Starter",
+      "og:description": "{{db|search-description}}",
+      "og:site_name": "Starter",
+      "og:url": "{{db|search-url}}",
+      "og:image": "{{db|search-image}}",
+      "og:type": "article",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@ndinc",
+      "twitter:title": "Search Result: {{db|search-title}} | Starter",
+      "twitter:description": "{{db|search-description}}",
+      "twitter:image:src": "images/ogp.png"
     }
-  ]
+  },
+  "social": {
+    "twitter": {
+      "name": "@ndinc",
+      "url": "https://twitter.com/"
+    },
+    "facebook": {
+      "name": "Facebook",
+      "url": "https://www.facebook.com/"
+    },
+    "instagram": {
+      "name": "Instagram",
+      "url": "https://instagram.com/"
+    }
+  }
 }

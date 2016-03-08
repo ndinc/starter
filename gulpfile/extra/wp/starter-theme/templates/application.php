@@ -11,10 +11,15 @@
   <meta name="description" content="<?php echo get_head_meta('description'); ?>">
   <meta name="keywords" content="<?php echo get_head_meta('keywords'); ?>">
   <?php include 'includes/ogp.php' ?>
-  <link rel="apple-touch-icon" href="<?php site_path('template_url'); ?>/images/apple-icon-precomposed.png">
-  <link rel="shortcut icon" type="image/x-icon" href="<?php site_path('template_url'); ?>/images/favicon.ico">
+  <link rel="apple-touch-icon" href="<?php echo assets_path('images/apple-icon-precomposed.png'); ?>">
+  <link rel="shortcut icon" type="image/x-icon" href="<?php site_path('template_url'); ?>/logos/favicon.ico">
+  <?php if (is_develop()): ?>
+  <link rel="stylesheet" href="http://localhost:3000/stylesheets/foundation.css">
+  <link rel="stylesheet" href="http://localhost:3000/stylesheets/app.css">
+  <?php else: ?>
   <link rel="stylesheet" href="<?php echo assets_path("stylesheets/foundation.css") ?>">
   <link rel="stylesheet" href="<?php echo assets_path("stylesheets/app.css") ?>">
+  <?php endif ?>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
     <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>

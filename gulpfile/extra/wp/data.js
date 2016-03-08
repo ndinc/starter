@@ -4,15 +4,15 @@ var gulp    = require('gulp')
 var path    = require('path')
 
 var paths = {
-  src: path.join(config.root.src, config.tasks.html.src, 'data/**'),
-  dest: path.join(config.root.dest, config.tasks.static.dest, 'data')
+  src: path.join(config.root.src, config.tasks.html.src, config.tasks.data.dest, '**'),
+  dest: path.join(config.root.dest, config.tasks.data.dest)
 }
 
-var staticTask = function() {
+var dataTask = function() {
   return gulp.src(paths.src)
     .pipe(changed(paths.dest)) // Ignore unchanged files
     .pipe(gulp.dest(paths.dest))
 }
 
-gulp.task('wp:data', staticTask)
-module.exports = staticTask
+gulp.task('wp:data', dataTask)
+module.exports = dataTask

@@ -1,7 +1,5 @@
 <?php
   global $_DATA;
-  // $mata = file_get_contents( dirname(__DIR__)."/data/meta.json");
-  // $page = file_get_contents( dirname(__DIR__)."/data/page.json");
 
   $rev_path = dirname(__DIR__)."/assets/rev-manifest.json";
   if(file_exists($rev_path)){
@@ -11,8 +9,14 @@
     $rev_json = null;
   }
 
-  $_DATA = array(
-    // 'meta' => json_decode($mata, true),
-    // 'page' => json_decode($page, true),
+  $data_path = dirname(__DIR__)."/assets/data/global.json";
+  if(file_exists($data_path)){
+    $data = file_get_contents($data_path);
+    $data_json = json_decode($data, true);
+  }else{
+    $data_json = array();
+  }
+
+  $_DATA = array_merge(array(
     'rev' => $rev_json
-  );
+  ), $data_json);

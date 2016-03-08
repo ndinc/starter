@@ -47,5 +47,5 @@ var htmlTask = function() {
     .pipe(browserSync.stream())
 }
 
-gulp.task('html', htmlTask)
+gulp.task('html', ['data'], htmlTask)
 module.exports = htmlTask

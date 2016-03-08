@@ -61,11 +61,11 @@ function is_staging() {
 
 function is_develop() {
   global $_DATA;
-  $_DOMAIN = $_DATA['meta']['domain'];
+  $_DOMAIN = $_DATA['domain'];
   $is_develop = false;
   if(is_array($_DOMAIN['develop'])){
     foreach ($_DOMAIN['develop'] as $i => $domain) {
-      if(strpos($_SERVER['HTTP_HOST'], $domain) !== false){
+      if(strpos($domain,$_SERVER['HTTP_HOST']) !== false){
         $is_develop = true;
       }
     }
