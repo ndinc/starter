@@ -26,7 +26,7 @@ function is_page_check(){
     the_post();
   }
 }
-add_action('template_redirect', 'is_page_check');
+// add_action('template_redirect', 'is_page_check');
 // ページステイタスの調整
 
 function my_the_post_action( $post ) {
