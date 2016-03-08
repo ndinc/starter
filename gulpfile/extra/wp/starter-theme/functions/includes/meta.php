@@ -99,7 +99,7 @@ function get_replace_value($key){
       return get_the_title($queried_object->ID);
       break;
     case 'single-description':
-      return get_the_excerpt($queried_object->ID);
+      return get_the_excerpt();
       break;
     case 'single-url':
       return get_permalink($queried_object->ID);

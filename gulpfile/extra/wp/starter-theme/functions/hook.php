@@ -5,7 +5,7 @@ function wp_wpautop(){
 // remove_filter('the_excerpt', 'wpautop');
 // remove_filter('the_content', 'wpautop');
 }
-add_action( 'init', 'wp_wpautop' );
+// add_action( 'init', 'wp_wpautop' );
 // 自動整形のoff
 
 function wp_head_adjust(){
@@ -17,16 +17,16 @@ add_action( 'init', 'wp_head_adjust' );
 
 function is_page_check(){
   global $wp_query;
-  if (is_static()) {
-    status_header( 200 );
-    $wp_query->is_404 = false;
-    $wp_query->is_static = true;
-  }
+  // if (is_static()) {
+  //   status_header( 200 );
+  //   $wp_query->is_404 = false;
+  //   $wp_query->is_static = true;
+  // }
   if(is_single()){
     the_post();
   }
 }
-// add_action('template_redirect', 'is_page_check');
+add_action('template_redirect', 'is_page_check');
 // ページステイタスの調整
 
 function my_the_post_action( $post ) {

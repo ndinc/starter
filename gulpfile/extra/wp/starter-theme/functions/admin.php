@@ -81,7 +81,7 @@ function custom_columns ($columns) {
 add_filter('manage_posts_columns', 'custom_columns');
 
 function remove_default_post_screen_metaboxes() {
-  remove_meta_box( 'postexcerpt','post','normal' );       // 抜粋
+  // remove_meta_box( 'postexcerpt','post','normal' );       // 抜粋
   remove_meta_box( 'trackbacksdiv','post','normal' );     // トラックバック送信
   // remove_meta_box( 'postcustom','post','normal' );        // カスタムフィールド
   remove_meta_box( 'commentstatusdiv','post','normal' );  // ディスカッション
@@ -90,9 +90,9 @@ function remove_default_post_screen_metaboxes() {
   // remove_meta_box( 'authordiv','post','normal' );         // 作成者
   // remove_meta_box( 'revisionsdiv','post','normal' );      // リビジョン
   remove_meta_box( 'formatdiv','post','normal' );         // フォーマット
-  remove_meta_box( 'categorydiv','post','side' );       // カテゴリー
+  // remove_meta_box( 'categorydiv','post','side' );       // カテゴリー
   remove_meta_box( 'tagsdiv-post_tag','post','side' );  // タグ
-  remove_meta_box( 'postimagediv','post','side' );  // アイキャッチ
+  // remove_meta_box( 'postimagediv','post','side' );  // アイキャッチ
 }
 add_action('do_meta_boxes','remove_default_post_screen_metaboxes');
 

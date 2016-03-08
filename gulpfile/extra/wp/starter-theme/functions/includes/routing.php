@@ -1,9 +1,9 @@
 <?php
 function get_routing_path(){
   global $wp_query;
-  $dir = '';
+  $dir = get_template_directory() . '/templates/';
   if(is_home()){
-    $page_path = $dir."pages/home.php";
+    $page_path = $dir.'pages/home.php';
   }else if(is_single()){
     $page_path = $dir.'single/'.get_post_type().'.php';
     if (!file_exists($page_path)){
@@ -19,11 +19,11 @@ function get_routing_path(){
       $page_path = $dir.'pages/taxonomy.php';
     }
   }else if(is_search()){
-    $page_path = $dir."pages/search.php";
+    $page_path = $dir.'pages/search.php';
   }else if(is_404()){
-    $page_path = $dir."pages/404.php";
+    $page_path = $dir.'pages/404.php';
   }else{
-    $page_path = $dir."pages/index.php";
+    $page_path = $dir.'pages/index.php';
   }
   if (!file_exists($page_path)){
     $page_path = $dir.'pages/home.php';
