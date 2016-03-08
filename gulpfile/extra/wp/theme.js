@@ -3,6 +3,7 @@ var options       = require('./options')
 var gulp         = require('gulp')
 var exec = require('gulp-exec');
 var package = require('../../../package.json')
+var gulpSequence = require('gulp-sequence')
 
 var themeTask = function() {
   return gulp.src('')
@@ -15,5 +16,13 @@ var themeTask = function() {
       console.log('end');
     })
 }
-
 gulp.task('wp:theme', themeTask)
+
+
+var starterTask = function(cb) {
+  gulpSequence('wp:theme','wp:production','develop', cb)
+}
+gulp.task('wp:starter', starterTask)
+
+
+module.exports = themeTask

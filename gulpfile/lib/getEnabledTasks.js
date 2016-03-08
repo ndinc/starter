@@ -8,7 +8,7 @@ var codeTasks = ['html', 'css', 'js']
 module.exports = function(env) {
   var jsTasks = {
     watch: 'webpack:watch',
-    development: 'webpack:watch',
+    development: 'webpack:development',
     production: 'webpack:production',
     wordpress: 'webpack:wordpress'
   }
