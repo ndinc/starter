@@ -1,6 +1,5 @@
+window.$ = window.jQuery = window.$ || require('jquery')
 import routing from './util/routing'
-
-const $ = require('jquery')
 
 $(function(){
   const app = new App();

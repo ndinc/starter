@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "imagesloaded": "^4.1.0",
-    "jquery": "~1.11.x"
+    "jquery": "~1.11.x",
+    "velocity-animate": "^1.2.3"
   },
   "devDependencies": {
     "babel-core": "^5.8.3",
