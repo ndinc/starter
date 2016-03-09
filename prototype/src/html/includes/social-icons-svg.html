@@ -1,10 +1,8 @@
 {% from 'helpers/helpers.html' import sprite %}
 <p class="social-icons">
-
-  {% for item in socialLinks %}
-    <a href="{{ item.url }}">
-      {{ sprite(item.id) }}
+  {% for key, value in social %}
+    <a href="{{ value.url }}" target="_blank">
+      {{ sprite(key) }}
     </a>
   {% endfor %}
-    ...or svg sprites!
 </p>

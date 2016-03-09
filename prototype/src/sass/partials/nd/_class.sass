@@ -47,6 +47,29 @@ dl.u-table
   background: no-repeat center / cover
 
 
+
+$light-grey: lightgrey
+$dark-grey: #555
+$red: #e53339
+
+$facebookBlue: #3b5998
+$twitterBlue: #4099ff
+
+.sprite
+  display: inline-block
+  fill: currentColor
+  margin: 8px
+  width: 32px
+  &.-instagram
+    fill: $dark-grey
+
+  &.-facebook
+    fill: $facebookBlue
+
+  &.-twitter
+    fill: $twitterBlue
+
+
 +respond-to(narrow)
   .is-desktop
     display: none !important

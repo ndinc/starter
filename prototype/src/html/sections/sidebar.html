@@ -28,16 +28,9 @@
             <li><a href="list.html">Oct,2015</a></li>
           </ul>
         </section>
-        <section class="content-section">
-          <p class="social-icons">
-            {% for key, value in social %}
-              <a class="icon -{{ key }}" href="{{ value.url }}" target="_blank"></a>
-            {% endfor %}
-          </p>
-        </section>
         {% from 'helpers/helpers.html' import sprite %}
         <section class="content-section">
-          <p class="social-icons">
+          <p class="m-social-icons">
             {% for key, value in social %}
               <a href="{{ value.url }}" target="_blank">
                 {{ sprite(key) }}
