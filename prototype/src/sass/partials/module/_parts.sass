@@ -96,3 +96,27 @@ $hamburget_width: 220px
       transform: scale(1) rotate(0deg) translate(0, 0)
     & > div:nth-child(3)
       transform: scale(1) rotate(0deg) translate(0, 0)
+
+.m-loader
+  $w: 46px
+  position: fixed
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 9999
+  fill: $key_color
+  top: 100%
+  background: rgba($color_white, .5)
+  opacity: 0
+  transition: opacity .2s
+  .is-loading &
+    opacity: 1
+    top: 0%
+  .loader-svg
+    position: absolute
+    top: 50%
+    left: 50%
+    width: $w
+    height: $w
+    margin-left: -1 * $w / 2
+    margin-top: -1 * $w / 2
