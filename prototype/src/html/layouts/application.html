@@ -33,7 +33,7 @@
   {% endblock %}
   {% include "includes/app-icons.html" %}
 </head>
-<body class="{{id}}">
+<body class="{{id}}" data-page-id="{{id}}">
   <div id="container">
     {% include "sections/header.html" %}
     {% block main %}{% endblock %}
