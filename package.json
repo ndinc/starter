@@ -20,6 +20,7 @@
     "test": "gulp production && karma start --single-run"
   },
   "dependencies": {
+    "device.js": "git://github.com/matthewhudson/device.js.git#v0.2.7",
     "imagesloaded": "^4.1.0",
     "jquery": "~1.11.x",
     "velocity-animate": "^1.2.3"
