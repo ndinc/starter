@@ -1,8 +1,10 @@
 var gulp            = require('gulp')
 var gulpSequence    = require('gulp-sequence')
+var getEnabledTasks = require('../lib/getEnabledTasks')
 
 var defaultTask = function(cb) {
-  gulpSequence('develop', 'watch', cb)
+  var tasks = getEnabledTasks('watch')
+  gulpSequence('clean', tasks.assetTasks, tasks.codeTasks, 'static', 'watch', cb)
 }
 
 gulp.task('default', defaultTask)
