@@ -33,7 +33,7 @@
   {% endblock %}
   {% include "includes/app-icons.html" %}
 </head>
-<body class="{% block page_id %}{% endblock %}" {% if page_id %}{% block page_id %}{% endblock %}{% endif %}>
+<body class="{{id}}">
   <div id="container">
     {% include "sections/header.html" %}
     {% block main %}{% endblock %}
