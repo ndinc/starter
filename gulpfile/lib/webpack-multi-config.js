@@ -4,6 +4,8 @@ if(!config.tasks.js) return
 var path            = require('path')
 var webpack         = require('webpack')
 var webpackManifest = require('./webpackManifest')
+var ModernizrWebpackPlugin = require('modernizr-webpack-plugin');
+var modernizrOptions = require('./modernizrOptions');
 
 module.exports = function(env, extra) {
   var jsSrc = path.resolve(config.root.src, config.tasks.js.src)
@@ -17,7 +19,9 @@ module.exports = function(env, extra) {
 
   var webpackConfig = {
     context: jsSrc,
-    plugins: [],
+    plugins: [
+      new ModernizrWebpackPlugin(modernizrOptions)
+    ],
     resolve: {
       root: jsSrc,
       extensions: [''].concat(extensions)
