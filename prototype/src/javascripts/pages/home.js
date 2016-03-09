@@ -1,6 +1,6 @@
 // ページごとに読み込まれるファイル
 // Must use "const" or "var"
-const imagesLoaded = require('imagesLoaded')
+const imagesLoaded = require('imagesloaded')
 const $ = require('jquery')
 
 export default class Index {
