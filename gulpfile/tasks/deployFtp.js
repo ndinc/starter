@@ -1,9 +1,14 @@
+try {
+  var server = require('../../server.config')
+} catch (e){
+  if(e.code = 'MODULE_NOT_FOUND') return
+}
+
 var config  = require('../config')
 var exec    = require('gulp-exec')
 var gulp    = require('gulp')
 var open    = require('open')
 var package = require('../../package.json')
-var server = require('../../server.config')
 
 var argv = process.argv;
 var env = argv.pop();
