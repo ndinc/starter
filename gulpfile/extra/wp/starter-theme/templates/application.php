@@ -14,8 +14,8 @@
   <link rel="apple-touch-icon" href="<?php echo assets_path('images/apple-icon-precomposed.png'); ?>">
   <link rel="shortcut icon" type="image/x-icon" href="<?php site_path('template_url'); ?>/logos/favicon.ico">
   <?php if (is_develop()): ?>
-  <link rel="stylesheet" href="http://localhost:3000/stylesheets/foundation.css">
-  <link rel="stylesheet" href="http://localhost:3000/stylesheets/app.css">
+  <link rel="stylesheet" href="http://localhost:5000/stylesheets/foundation.css">
+  <link rel="stylesheet" href="http://localhost:5000/stylesheets/app.css">
   <?php else: ?>
   <link rel="stylesheet" href="<?php echo assets_path("stylesheets/foundation.css") ?>">
   <link rel="stylesheet" href="<?php echo assets_path("stylesheets/app.css") ?>">

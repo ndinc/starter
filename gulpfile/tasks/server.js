@@ -26,8 +26,8 @@ var serverTask = function() {
     .use('/', express.static(settings.root, settings.staticOptions))
     .listen(settings.port)
 
-  gutil.log('production server started on ' + gutil.colors.green(url))
-  open(url)
+  gutil.log('development file server started on ' + gutil.colors.green(url))
+  // open(url)
 }
 
 gulp.task('server', serverTask)

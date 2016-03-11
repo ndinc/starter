@@ -20,13 +20,13 @@ var options = {
     'extra-php': [
       'define(\'WP_DEBUG\', true);',
       'define(\'WP_DEBUG_LOG\', true);',
-      'define(\'WP_HOME\', \'http://localhost:8001\');',
-      'define(\'WP_SITEURL\',\'http://localhost:8001' + wp_install_path + '\');',
+      'define(\'WP_HOME\', \'http://localhost:' + config.tasks.php.server.port + '\');',
+      'define(\'WP_SITEURL\',\'http://localhost:' + config.tasks.php.server.port + wp_install_path + '\');',
     ]
   },
   'install': {
     'path': config.root.public + wp_install_path,
-    'url': 'http://localhost:8001',
+    'url': 'http://localhost:' + config.tasks.php.server.port,
     'title': package.name,
     'admin_user': 'master',
     'admin_password': randomstring.generate(12),

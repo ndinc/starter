@@ -28,6 +28,14 @@
       "pipeStdout": true
     },
 
+    "php": {
+      "server": {
+        "port": 8001,
+        "base": "public"
+      },
+      "extensions": ["html","php"]
+    },
+
     "browserSync": {
       "server": {
         "baseDir": "prototype/dest"
@@ -68,7 +76,7 @@
       "htmlmin": {
         "collapseWhitespace": true
       },
-      "extensions": ["html", "json"],
+      "extensions": ["html", "json", "php"],
       "excludeFolders": ["sections", "modules", "includes", "helpers", "layouts"]
     },
 
