@@ -5,7 +5,7 @@ var path    = require('path')
 
 var paths = {
   src: path.join(config.root.src, config.tasks.html.src, config.tasks.data.dest, '**'),
-  dest: path.join(config.root.dest, config.tasks.data.dest)
+  dest: path.join(config.root.dest, config.tasks.data.src)
 }
 
 var dataTask = function() {
