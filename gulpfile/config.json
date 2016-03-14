@@ -20,7 +20,7 @@
 
     "data": {
       "src": "data",
-      "dest": "data"
+      "dest": "generated"
     },
 
     "exec": {
@@ -33,7 +33,7 @@
         "port": 8001,
         "base": "public"
       },
-      "extensions": ["html","php"]
+      "extensions": ["php"]
     },
 
     "browserSync": {
@@ -72,7 +72,7 @@
     "html": {
       "src": "html",
       "dest": "./",
-      "dataFile": "data/global.json",
+      "dataFile": "generated/global.json",
       "htmlmin": {
         "collapseWhitespace": true
       },

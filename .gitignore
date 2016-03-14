@@ -7,7 +7,7 @@ assets
 dest
 Desktop.ini
 node_modules
-**/generated/_icons.sass
+**/generated/*
 npm-debug.log
 password.txt
 server.config.js
