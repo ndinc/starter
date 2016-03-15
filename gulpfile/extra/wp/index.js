@@ -18,5 +18,5 @@ var wordpressTask = function(cb) {
   });
 }
 
-gulp.task('wordpress', wordpressTask)
+gulp.task('wp:setup', wordpressTask)
 module.exports = wordpressTask

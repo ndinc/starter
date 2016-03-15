@@ -10,4 +10,4 @@ var initializeTask = function(cb) {
     'git:init'
   , cb)
 }
-gulp.task('initialize', initializeTask)
+gulp.task('setup', initializeTask)
