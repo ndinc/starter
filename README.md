@@ -42,6 +42,10 @@ gulp setup
 gulp wp:setup
 ```
 
+#### Except static site
+Remove **`public`** from .gitignore file
+
+
 ### Upgrade
 When there are new commits in the `gulpfile/` files, update  files and gulp tasks.
 ```bash
