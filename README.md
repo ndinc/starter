@@ -1,87 +1,84 @@
-#![Gulp Starter](src/images/gulp-starter-logo.png)
+#Starter
+This Starter is folked by [Gulp Starter](https://github.com/vigetlabs/gulp-starter)<br>
+Add wordpress customize and my commands.
 
-Gulp Starter is a delicious blend of tasks and build tools poured into [Gulp](http://gulpjs.com/) to form a full-featured modern asset pipeline. It can be used as-is as a static site builder, or can be configured and integrated into your own development environment and site or app structure. Checkout [`gulpfile/extras`](/gulpfile/extras) for Rails and Craft configurations.
-
-[![Build Status](https://travis-ci.org/vigetlabs/gulp-starter.svg?branch=static-server)](https://travis-ci.org/vigetlabs/gulp-starter)
-
-```bash
-git clone https://github.com/vigetlabs/gulp-starter.git MyApp
-cd MyApp
-npm install
-npm run gulp
-```
-
-**Demo compiled with gulp-starter:** http://vigetlabs.github.io/gulp-starter/
-
-(view files on [gh-pages](https://github.com/vigetlabs/gulp-starter/tree/gh-pages) branch)
-
-## Features
-- **CSS:** [Sass](http://sass-lang.com/) (indented, scss, or both)
-  - Libsass (node-sass) for super fast compiles
-  - Autoprefixer
-- **JS:** Modular ES6 with [Babel](http://babeljs.io/) and [Webpack](http://webpack.github.io/)
-  - Async requires
-  - Multiple bundles
-  - Shared modules
-  - Source Maps
-- **HTML**: Static templating with [Nunjucks](https://mozilla.github.io/nunjucks/) and [gulp-data](https://github.com/colynb/gulp-data)
-- **Images:**
-  - **SVG Sprites**: Compiles a spritesheet from a folder of SVGs
-  - Compression with image-min
-- **Fonts:**
-  - **Icon Fonts:** Generate from a folder of SVGs
-  - Folder and `.sass` mixin for including WebFonts
-- **Development Mode:**
-  - File Watching and Live Reloading with [BrowserSync](http://www.browsersync.io/)
-  - Source Maps
-- **Production Builds:**
-  - JS and CSS are uglified and minified
-  - All filneames are revisioned with an md5 hash, a `rev-manifest.json` file is genrearted and all asset references are updated in html, css, and js
-  - File size reporting
-  - Local production sever for testing
-- **Testing:**
-  - JS test examples with Karma, Mocha, Chai, Sinon
-  - Travis CI integration
-- **Deployment:**
-  - Quickly deploy `public` folder to gh-pages (`gulp deploy` task)
 
 # Basic Usage
 Make sure Node 0.12.x is installed. I recommend using [NVM](https://github.com/creationix/nvm) to manage versions.
 
-#### Install Dependencies
-```
+### Dependencies
+- [npm](https://www.npmjs.com/)
+- [gulp](http://gulpjs.com/)
+- [wp-cli](http://wp-cli.org/)
+- [git-flow](http://danielkummer.github.io/git-flow-cheatsheet/index.ja_JP.html)
+
+## Install Dependencies
+
+```bash
 npm install
 ```
 
-#### Start compiling, serving, and watching files
+And, Change these values on **package.json**
+```json
+{
+  "name": "starter",
+  "version": "2.2.0",
+  "description": "A full featured configurable gulp asset pipeline and static site builder",
+  "homepage": "http://ndinc.github.io/starter/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ndinc/starter.git"
+  }
+}
 ```
-npm run gulp
-```
 
-(or `npm run development`)
-
-This runs `gulp` from `./node_modules/bin`, using the version installed with this project, rather than a globally installed instance. All commands in the package.json `scripts` work this way. The `gulp` command runs the `default` task, defined in `gulpfile/tasks/default.js`.
-
-All files will compile in development mode (uncompressed with source maps). [BrowserSync](http://www.browsersync.io/) will serve up files to `localhost:3000` and will stream live changes to the code and assets to all connected browsers. Don't forget about the additional BrowserSync tools available on `localhost:3001`!
-
-To run any other existing task, simply add the task name after the `gulp` command. Example:
-
+Then,
 ```bash
-npm run gulp production
+gulp setup
 ```
 
-#### Configuration
-Directory and top level settings are convienently exposed in `gulpfile/config.json`. All task configuration objects have `src` and `dest` directories specfied. These are relative to `root.src` and `root.dest` respectively. Each configuration also has an extensions array. This is used for file watching, and file deleting/replacing.
+#### and Wordpress
+```bash
+gulp wp:setup
+```
+
+## Start compiling, serving, and watching files
+
+####Static Site
+#####watch
+```bash
+gulp
+```
+#####compuke for production
+```bash
+gulp production
+```
+####Wordpress
+#####watch
+```bash
+gulp wp
+```
+#####production
+```bash
+gulp wp:production
+```
+
+
+## Configuration
+Directory and top level settings are convienently exposed in `gulpfile/config.json`. All task configuration objects have `src` and `dest` directories specfied. These are relative to `root.src` and `root.dest` and `root.public` respectively. Each configuration also has an extensions array. This is used for file watching, and file deleting/replacing.
 
 If there is a feature you do not wish to use on your project, simply delete the configuration, and the task will be skipped.
 
+<!--
 ### Run JavaScript Tests
 ```
 npm run test
 ```
 Test files located in `__tests__` folders are picked up and run using
 [Karma](http://karma-runner.github.io/0.12/index.html), [Mocha](http://mochajs.org/), [Chai](http://chaijs.com/), and [Sinon](http://sinonjs.org/). The test script right now first compiles a production build, and then, if successful runs Karma. This is nice when using something like [Travis CI](https://travis-ci.org/vigetlabs/gulp-starter) in that if an error occurs during the build step, Travis alerts me that it failed. To pass, the files have to compile properly AND pass the JS tests.
+ -->
 
+<!--
 ### Build production-ready files
 ```
 npm run production
@@ -94,16 +91,59 @@ npm run demo
 ```
 
 This will start a static server that serves your production files to http://localhost:5000. This is primarily meant as a way to preview your production build locally, not necessarily for use as a live production server.
+ -->
 
-### Deploy to gh-pages
+## Deploy
+
+#### Setup
+
+#####To gh-pages
+Change deploy tasks on `gulpfile/package.json`
+
+```json
+{
+  "tasks": {
+    "deploy": {
+      "pretasks": ["production"],
+      "tasks": ["deploy:github"]
+    }
+  }
+}
+```
+
+#####To ftp-server
+Setup **`server.config.json`**
+
+Change deploy tasks on `gulpfile/package.json`
+
+for static site
+```json
+{
+  "tasks": {
+    "deploy": {
+      "pretasks": ["production"],
+      "tasks": ["deploy:ftp"]
+    }
+  }
+}
+```
+
+for wordpress
+```json
+{
+  "tasks": {
+    "deploy": {
+      "pretasks": ["wp:production"],
+      "tasks": ["deploy:ftp"]
+    }
+  }
+}
+```
+#### Command
 ```
 npm run deploy
 ```
-This task compiles production code and then uses [gulp-gh-pages](https://github.com/shinnn/gulp-gh-pages) to push the contents of your `dest.root` to a `gh-pages` (or other specified) branch, viewable at http://[your-username].github.io/[your-repo-name]. Be sure to update the `homepage` property in your `package.json`.
-
-GitHub Pages isn't the most robust of hosting solutions (you'll eventually run into relative path issues), but it's a great place to quickly share in-progress work, and you get it for free.
-
-[Divshot](https://divshot.com/) and [Surge.sh](http://surge.sh/) are a couple great alternatives for production-ready static hosting to check out, and are just as easy to deploy to. Where ever you're deploying to, all you need to do is `npm run gulp production` and transfer the contents of the `public` folder to your server however you see fit.
+This task compiles production code and then deploy contents of your `root.public` to a `gh-pages` or `ftp server`
 
 # Task Details
 
@@ -219,41 +259,11 @@ I recommend setting up your SVGs on a 500 x 500 canvas, centering your artwork, 
 #### Static Files (favicons, app icons, etc.)
 There are some files that belong in your root destination directory that you won't want to process or revision in production. Things like [favicons, app icons, etc.](http://realfavicongenerator.net/), should go in `src/static`, and will get copied over to `public` as a last step (after revisioning in production). *Nothing* should ever go directly in `public`, since it gets completely trashed and re-built when running the `default` or `production` tasks.
 
-## Notable changes from 1.0
-- Full asset pipeline and static html compilation
-- `gulpfile` is now a directory
-- update directory structure
-- Replaced Browserify with [Webpack](http://webpack.github.io/docs/webpack-for-browserify-users.html)!
-  - Async CommonJS module requires
-  - Automatically splits out shared dependencies
-- New `html` task w/ Nunjucks templating/compiling
-- Replace CoffeeScript with ES6 ([Babel.js](http://babeljs.io/))
-- New `server` task to test production files locally
-- New `deploy` task to deploy the public directory to gh-pages
-- New `rev` task that revisions filenames and compress css and js
-- Use `gulp-watch` instead of `gulp.watch` (correctly handles new files)
-- New `production` task runs tests, compression + filename revisioning
-- Remove old examples and extraneous dependencies
-- Upgrades dependencies
-- Added example Travis CI integration that runs karma tests and production build
-- Add SVG sprite implementation from @synapticism in #100
-
-**Check out other open source work happening at [Viget](http://viget.com) on [code.viget.com](http://code.viget.com)**
-
-***
-
-<a href="http://code.viget.com">
-  <img src="http://code.viget.com/github-banner.png" alt="Code At Viget">
-</a>
-
-Visit [code.viget.com](http://code.viget.com) to see more projects from [Viget.](https://viget.com)
+------
+Visit [nD inc.](http://ndinc.jp)
 
 ## Todo
 - デフォルトのモバイルの対応を
-- data/page.json をつくって、OGPなどを反映する
-- テストサーバーへの deploy 対応
-- scaffold の対応
-- wp scaffold の対応
 - よくつかう js プラグインを入れる
 - sprite-smith での対応
 - useminでstylesheetsまとめる
