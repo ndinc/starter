@@ -42,6 +42,12 @@ gulp setup
 gulp wp:setup
 ```
 
+### Upgrade
+When there are new commits in the `gulpfile/` files, update  files and gulp tasks.
+```bash
+gulp upgrade
+```
+
 ## Start compiling, serving, and watching files
 
 ####Static Site
