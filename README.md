@@ -12,34 +12,39 @@ Make sure Node 0.12.x is installed. I recommend using [NVM](https://github.com/c
 - [wp-cli](http://wp-cli.org/)
 - [git-flow](http://danielkummer.github.io/git-flow-cheatsheet/index.ja_JP.html)
 
-## Install Dependencies
+## Install
 
 ```bash
-npm install
+$ cd path/to
+$ git clone git@github.com:ndinc/starter.git MyApp
+$ cd MyApp
+```
+```bash
+$ npm install
 ```
 
 And, Change these values on **package.json**
 ```json
 {
-  "name": "starter",
-  "version": "2.2.0",
-  "description": "A full featured configurable gulp asset pipeline and static site builder",
-  "homepage": "http://ndinc.github.io/starter/",
+  "name": "MyApp",
+  "version": "0.0.1",
+  "description": "MyApp Description",
+  "homepage": "http://ndinc.github.io/MyApp/",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ndinc/starter.git"
+    "url": "git://github.com/ndinc/MyApp.git"
   }
 }
 ```
 
 Then,
 ```bash
-gulp setup
+$ gulp setup
 ```
 
 #### and Wordpress
 ```bash
-gulp wp:setup
+$ gulp wp:setup
 ```
 
 #### Except static site
@@ -49,7 +54,7 @@ Remove **`public`** from .gitignore file
 ### Upgrade
 When there are new commits in the `gulpfile/` files, update  files and gulp tasks.
 ```bash
-gulp upgrade
+$ gulp upgrade
 ```
 
 ## Start compiling, serving, and watching files
@@ -57,20 +62,20 @@ gulp upgrade
 ####Static Site
 #####watch
 ```bash
-gulp
+$ gulp
 ```
 #####compuke for production
 ```bash
-gulp production
+$ gulp production
 ```
 ####Wordpress
 #####watch
 ```bash
-gulp wp
+$ gulp wp
 ```
 #####production
 ```bash
-gulp wp:production
+$ gulp wp:production
 ```
 
 
@@ -150,8 +155,8 @@ for wordpress
 }
 ```
 #### Command
-```
-npm run deploy
+```bash
+$ gulp deploy
 ```
 This task compiles production code and then deploy contents of your `root.public` to a `gh-pages` or `ftp server`
 
