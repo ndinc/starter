@@ -4,7 +4,7 @@ var getEnabledTasks = require('../../lib/getEnabledTasks')
 
 var defaultTask = function(cb) {
   var tasks = getEnabledTasks('watch')
-  gulpSequence('clean', tasks.assetTasks, tasks.codeTasks, 'static', 'wp:watch', cb)
+  gulpSequence('clean', tasks.assetTasks, tasks.codeTasks, 'static', 'wp:data', 'wp:copy', 'wp:watch', cb)
 }
 
 gulp.task('wp', defaultTask)
