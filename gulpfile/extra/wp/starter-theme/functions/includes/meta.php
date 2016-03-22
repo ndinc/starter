@@ -31,8 +31,12 @@ function get_head_meta($name=null, $type=null){
         $meta = replace_template_value($_META['single']);
       break;
     case is_page():
-      $slug = get_page_slug();
-        $meta = replace_template_value($_META['pages'][$slug]);
+        $slug = get_page_slug();
+        if (isset($_META['pages'][$slug])) {
+          $meta = replace_template_value($_META['pages'][$slug]);
+        }else{
+          $meta = replace_template_value($_META['page']);
+        }
       break;
     case is_post_type_archive():
         $meta = replace_template_value($_META['archive']);
@@ -94,6 +98,18 @@ function get_replace_value($key){
       break;
     case 'home-image':
       return $_DATA['meta']['image'];
+      break;
+    case 'page-title':
+      return get_the_title($queried_object->ID);
+      break;
+    case 'page-description':
+      return get_the_excerpt();
+      break;
+    case 'page-url':
+      return get_permalink($queried_object->ID);
+      break;
+    case 'page-image':
+      return get_post_main_image($queried_object->ID);
       break;
     case 'single-title':
       return get_the_title($queried_object->ID);

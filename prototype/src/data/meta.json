@@ -57,6 +57,22 @@
       "twitter:image:src": "{{image}}"
     }
   },
+  "page": {
+    "title": "{{db|page-title}} | {{title}}",
+    "description": "{{db|page-description}}",
+    "keywords": "{{keywords}}",
+    "og:title": "{{page.title}}",
+    "og:description": "{{page.description}}",
+    "og:site_name": "{{site_name}}",
+    "og:url": "{{db|page-url}}",
+    "og:image": "{{db|page-image}}",
+    "og:type": "article",
+    "twitter:card": "summary_large_image",
+    "twitter:site": "{{twitter}}",
+    "twitter:title": "{{page.title}}",
+    "twitter:description": "{{page.description}}",
+    "twitter:image:src": "{{image}}"
+  },
   "single": {
     "title": "{{db|single-title}} | {{title}}",
     "description": "{{db|single-description}}",
