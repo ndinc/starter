@@ -1,5 +1,6 @@
 var config       = require('../../config')
 var options       = require('./options')
+var gutil        = require("gulp-util")
 // var package = require('../../../package.json')
 var gulp         = require('gulp')
 var exec = require('gulp-exec');
@@ -30,7 +31,14 @@ var downloadTask = function() {
   return gulp.src('')
     .pipe(exec(['mkdir','-p', config.root.public].join(' ') , config.tasks.exec))
     .pipe(exec(['mkdir','-p', options.download.path].join(' ') , config.tasks.exec))
-    .pipe(exec(['wp core download', getOptionString('download')].join(' ') , config.tasks.exec))
+    .pipe(exec([
+      'test -e', options.download.path,
+      '&&',
+      'echo \"'+ gutil.colors['yellow']('WordPress files seem to already be present here.') + '\"',
+      '||',
+      'wp core download', getOptionString('download'),
+      ].join(' ') , config.tasks.exec))
+    .pipe(exec.reporter())
     .on('end', function(){
     })
 }
