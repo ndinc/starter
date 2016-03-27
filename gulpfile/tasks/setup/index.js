@@ -8,7 +8,7 @@ var initializeTask = function(cb) {
   gulpSequence(
     'initPackage',
     'setupServerConfig',
-    'git:init'
+    // 'git:init'
   , cb)
 }
 gulp.task('setup', initializeTask)
