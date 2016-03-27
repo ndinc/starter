@@ -8,17 +8,22 @@ var package = require('../../../package.json')
 var exec    = require('gulp-exec')
 var gulp    = require('gulp')
 var path    = require('path')
+var gutil   = require("gulp-util")
 
 var dbImportTask = function() {
   var localServer = server['local'];
   return gulp.src('')
     .pipe(exec([
-      'mysql',
-      '-h', localServer.db.host,
-      '-u', localServer.db.user,
-      '-p' + localServer.db.password,
-      localServer.db.name,
-      '<', path.join('sql', package.name + '.sql')
+      'test -e', path.join('sql', package.name + '.sql'),
+      '&&',
+        'mysql',
+        '-h', localServer.db.host,
+        '-u', localServer.db.user,
+        '-p' + localServer.db.password,
+        localServer.db.name,
+        '<', path.join('sql', package.name + '.sql'),
+      '||',
+        'echo \"'+ gutil.colors['yellow']('no such file or directory \'sql/' + package.name + '.sql\'') + '\"',
     ].join(' '), config.tasks.exec))
     .pipe(exec.reporter())
 }
