@@ -15,7 +15,6 @@ var wordpressTask = function(cb) {
           'db:create',
           'db:import',
           'wp:config',
-          'wp:option',
           'wp:production',
         cb);
       }
