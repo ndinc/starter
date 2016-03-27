@@ -4,6 +4,7 @@ var gutil        = require("gulp-util")
 // var package = require('../../../package.json')
 var gulp         = require('gulp')
 var exec = require('gulp-exec');
+var path = require('path');
 
 
 var getOptionString = function(task){
