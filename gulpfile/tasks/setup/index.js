@@ -6,6 +6,7 @@ var path    = require('path')
 
 var initializeTask = function(cb) {
   gulpSequence(
+    'initVersion',
     'setupServerConfig',
     'git:init'
   , cb)
