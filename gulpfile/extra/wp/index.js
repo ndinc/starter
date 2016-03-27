@@ -39,5 +39,5 @@ var wordpressTask = function(cb) {
   }
 }
 
-gulp.task('wp:setup', wordpressTask)
+gulp.task('wp:setup', ['setup'], wordpressTask)
 module.exports = wordpressTask
