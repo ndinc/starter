@@ -32,7 +32,7 @@ var downloadTask = function() {
     .pipe(exec(['mkdir','-p', config.root.public].join(' ') , config.tasks.exec))
     .pipe(exec(['mkdir','-p', options.download.path].join(' ') , config.tasks.exec))
     .pipe(exec([
-      'test -e', options.download.path,
+      'test -e', path.join(options.download.path,'wp-load.php'),
       '&&',
       'echo \"'+ gutil.colors['yellow']('WordPress files seem to already be present here.') + '\"',
       '||',

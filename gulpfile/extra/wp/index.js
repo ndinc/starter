@@ -8,7 +8,7 @@ var fs = require('fs')
 var wordpressTask = function(cb) {
   if(package.name){
     try {
-      var wp = fs.readFileSync(options.download.path + '/wp-load.php', 'utf8')
+      var wp = fs.readFileSync(path.join(options.download.path, 'wp-load.php'), 'utf8')
       if (wp) {
         gulpSequence(
           'db:create',
