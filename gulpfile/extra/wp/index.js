@@ -35,8 +35,6 @@ var wordpressTask = function(cb) {
         cb);
       }
     }
-  }else{
-    console.log('Add package.json name');
   }
 }
 
