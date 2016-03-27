@@ -19,9 +19,9 @@ var server = server[env] || server['staging'];
 
 var wp_exclude_glob = [
   'wp-config.php',
-  'uploads/',
-  'plugins/',
-  'upgrade/'
+  'wp-content/uploads/',
+  'wp-content/plugins/',
+  'wp-content/upgrade/'
 ];
 
 var dirs = {
