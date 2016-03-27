@@ -4,6 +4,7 @@ var gulp         = require('gulp')
 var gulpSequence = require('gulp-sequence')
 var exec = require('child_process').exec;
 var fs = require('fs')
+var path = require('path')
 
 var wordpressTask = function(cb) {
   if(package.name){
