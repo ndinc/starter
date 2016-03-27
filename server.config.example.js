@@ -1,6 +1,14 @@
 var config  = require('./gulpfile/config')
 
 var server = {
+  "local": {
+    "db": {
+      "name": "wp_{{name}}",
+      "user": "root",
+      "password": "root",
+      "host": "localhost"
+    }
+  },
   "staging": {
     "type": "sftp",
     "host": "{{host}}",
@@ -23,7 +31,7 @@ var server = {
     "port": "22",
     "path": "{{path/to}}",
     "db": {
-      "name": "{{name}}}",
+      "name": "{{name}}",
       "user": "root",
       "password": "root",
       "host": "localhost"
