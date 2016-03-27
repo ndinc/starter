@@ -46,8 +46,14 @@ gulp.task('wp:download', downloadTask)
 
 var configTask = function() {
   return gulp.src('')
-    .pipe(exec(['rm','-fr', options.config.path + '/wp-config.php'].join(' ') , config.tasks.exec))
-    .pipe(exec(['wp core config', getOptionString('config')].join(' ') , config.tasks.exec))
+    .pipe(exec([
+      'test -e', options.config.path + '/wp-config.php',
+      '&&',
+      'echo \"'+ gutil.colors['yellow']('The \'wp-config.php\' file already exists.') + '\"',
+      '||',
+      'wp core config', getOptionString('config')
+      ].join(' ') , config.tasks.exec))
+    .pipe(exec.reporter())
     .on('end', function(){
     })
 }
