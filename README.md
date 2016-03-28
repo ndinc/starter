@@ -38,11 +38,13 @@ And, Change these values on **package.json**
 ```
 
 Then,
+
+#### Static Site
 ```bash
 $ gulp setup
 ```
 
-#### and Wordpress
+#### or Wordpress
 ```bash
 $ gulp wp:setup
 ```
@@ -64,7 +66,7 @@ $ gulp upgrade
 ```bash
 $ gulp
 ```
-#####compuke for production
+#####compile for production
 ```bash
 $ gulp production
 ```
@@ -73,7 +75,7 @@ $ gulp production
 ```bash
 $ gulp wp
 ```
-#####production
+#####compile for production
 ```bash
 $ gulp wp:production
 ```
