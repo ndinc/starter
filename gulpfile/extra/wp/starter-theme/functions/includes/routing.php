@@ -13,6 +13,9 @@ function get_routing_path(){
     $page_path = $dir.'pages/' . get_query_var('post_type') . '.php';
   }else if(is_page()){
     $page_path = $dir.'pages/' . get_query_var('name') . '.php';
+    if (!file_exists($page_path)){
+      $page_path = $dir.'pages/static.php';
+    }
   }else if(is_tax()){
     $page_path = $dir.'pages/'.$wp_query->queried_object->taxonomy.'.php';
     if (!file_exists($page_path)){
