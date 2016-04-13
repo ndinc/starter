@@ -8,6 +8,7 @@ var options = {
   'install_path': wp_install_path,
   'download': {
     'locale': 'ja',
+    'version': '4.4.2',
     'path': config.root.public + wp_install_path
   },
   'config': {

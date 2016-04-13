@@ -1,7 +1,7 @@
 {
   "develop": [
     "http://localhost:3000",
-    "http://localhost:8001"
+    "http://localhost:8888"
   ],
   "staging": "http://starter.ndv.com",
   "production": "http://starter.com"

@@ -30,7 +30,7 @@
 
     "php": {
       "server": {
-        "port": 8001,
+        "port": 8888,
         "base": "public"
       },
       "extensions": ["php"]
