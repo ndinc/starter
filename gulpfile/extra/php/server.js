@@ -18,5 +18,14 @@ var phpServerTask = function() {
       }, 1000)
     })
 };
-
 gulp.task('php:server', phpServerTask)
+
+var mampStartTask = function() {
+  return gulp.src('')
+    .pipe(exec(['mkdir -p public'].join(' ') , config.tasks.exec))
+    .pipe(exec(['mamp start', package.name].join(' ') , config.tasks.exec))
+    .pipe(exec.reporter())
+    .on('end', function(){
+    })
+};
+gulp.task('mamp:start', mampStartTask)
