@@ -1,16 +1,22 @@
 <?php
-function get_post_query($type, $num=10){
+function get_post_query($type="post", $num=10, $extra=null){
   switch($type){
-
-    case 'post':
-      return get_wp_query(array(
-        'post_type' => 'post',
+    case 'custom-post':
+      $args = array(
+        'post_type' => 'custom-post',
         'posts_per_page' => $num,
-      ));
+      );
       break;
     default:
-      return get_wp_query();
+      $args = array(
+        'post_type' => $type,
+        'posts_per_page' => $num,
+      );
   }
+  if($extra){
+    $args = array_merge($args, $extra);
+  }
+  return get_wp_query($args);
 }
 
 // <?php $wp_post_query = get_post_query('post', -1);
