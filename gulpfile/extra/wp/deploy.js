@@ -1,5 +1,5 @@
 try {
-  var server = require('../../../server.config')
+  var serverConfig = require('../../../server.config')
 } catch (e){
   if(e.code = 'MODULE_NOT_FOUND') return
 }
@@ -11,11 +11,6 @@ var gulp    = require('gulp')
 var open    = require('open')
 var package = require('../../../package.json')
 var path    = require('path')
-
-var argv = process.argv;
-var env = argv.pop();
-
-var server = server[env] || server['staging'];
 
 var wp_exclude_glob = [
   'wp-config.php',
@@ -31,8 +26,9 @@ var dirs = {
   'upload': options.install_path + '/wp-content/uploads'
 }
 
-var deployTask = function(d){
+var deployTask = function(d, e){
   var dir = dirs[d] || dirs['theme'];
+  var server = serverConfig[e] || serverConfig['staging'];
   return function(){
     return gulp.src('')
       .pipe(exec([
@@ -54,10 +50,16 @@ var deployTask = function(d){
   }
 }
 
-gulp.task('wp:deploy', ['wp:deploy:theme'])
-gulp.task('wp:deploy:all', config.tasks.deploy.pretasks, deployTask('all'))
-gulp.task('wp:deploy:plugin', config.tasks.deploy.pretasks, deployTask('plugin'))
-gulp.task('wp:deploy:upload', config.tasks.deploy.pretasks, deployTask('upload'))
-gulp.task('wp:deploy:theme', config.tasks.deploy.pretasks, deployTask('theme'))
+gulp.task('wp:staging', ['wp:staging:theme'])
+gulp.task('wp:staging:all', config.tasks.deploy.pretasks, deployTask('all', 'staging'))
+gulp.task('wp:staging:plugin', config.tasks.deploy.pretasks, deployTask('plugin', 'staging'))
+gulp.task('wp:staging:upload', config.tasks.deploy.pretasks, deployTask('upload', 'staging'))
+gulp.task('wp:staging:theme', config.tasks.deploy.pretasks, deployTask('theme', 'staging'))
+
+gulp.task('wp:publish', ['wp:publish:theme'])
+gulp.task('wp:publish:all', config.tasks.deploy.pretasks, deployTask('all', 'production'))
+gulp.task('wp:publish:plugin', config.tasks.deploy.pretasks, deployTask('plugin', 'production'))
+gulp.task('wp:publish:upload', config.tasks.deploy.pretasks, deployTask('upload', 'production'))
+gulp.task('wp:publish:theme', config.tasks.deploy.pretasks, deployTask('theme', 'production'))
 
 module.exports = deployTask('theme')
