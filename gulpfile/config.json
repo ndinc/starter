@@ -14,8 +14,9 @@
         ".htaccess",
         ".htpasswd"
       ],
-      "pretasks": ["production"],
-      "tasks": ["deploy:ftp"]
+      "pretasks": ["wp:production"],
+      "staging_tasks": ["wp:staging"],
+      "production_tasks": ["wp:publish"]
     },
 
     "data": {

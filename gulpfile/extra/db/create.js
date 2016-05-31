@@ -23,4 +23,6 @@ var createTask = function() {
     })
 }
 
+module.exports = createTask;
+
 gulp.task('db:create', createTask)
