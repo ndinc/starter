@@ -18,7 +18,6 @@ p
   +rem("margin", $size 0)
   +rem("font-size", $size)
   +rem("line-height", $size * 1.8)
-  +rem("letter-spacing", 2px)
   +respond-to("small-only")
     +rem("line-height", $size * 2)
 
@@ -29,7 +28,6 @@ p
   &.lead
     $size: $font_size_xlarge
     +rem("font-size", $size)
-    +rem("letter-spacing", 2px)
     +rem("line-height", $size * 1.6)
     +rem("margin", 0 0 $size 0)
   &.note
@@ -39,7 +37,6 @@ p
     +rem("margin", $size * 0.8 0)
     +rem("font-size", $size)
     +rem("line-height", $size * 1.8)
-    +rem("letter-spacing", 1px)
 
 dl
   +rem("margin", $size * 2 0)
@@ -85,17 +82,10 @@ li
     -webkit-margin-start: 0px
     -webkit-margin-end: 0px
     position: relative
-    // &:before
-    //   content: attr(cite)
-    //   position: absolute
-    //   right: 0
-    //   bottom: 0
-    //   color: $color_gray
     p:first-child
       margin-top: 0
     p:last-child
       margin-bottom: 0
-
   ul,ol
     padding-left: $size * 1.2
   ul
@@ -104,6 +94,5 @@ li
   ol
     li
       list-style-type: decimal
-
   a
     text-decoration: underline
