@@ -179,6 +179,7 @@
       $px-values: join($px-values, auto)
       $rem-values: join($rem-values, auto)
     @else
+      $value: strip-unit($value)
       $px-values: join($px-values, round($value * $font-size))
       $rem-values: join($rem-values, #{$value}rem)
   #{$property}: $px-values
@@ -204,3 +205,10 @@
   @else
     -webkit-font-smoothing: subpixel-antialiased
     -moz-osx-font-smoothing: auto
+
+
+@mixin cover_image
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+

@@ -1,0 +1,122 @@
+@import "sassline/modular-scale";
+// referer modular-scale
+// - - - - - - - - - - - -
+// scale-0: (
+//   alpha:   28.0,
+//   beta:    25.0,
+//   gamma:   22.4,
+//   delta:   20.0,
+//   epsilon: 17.9,
+//   zeta:    16.0,
+//   eta:     14.3,
+//   theta:   12.8,
+//   iota:    11.5
+// ),
+// http://www.modularscale.com/?16,28&px&1.25&web&text
+
+$get-scale: map-get($modular-scale, scale-0);
+
+$font_size_xxlarge: map-get($get-scale, alpha) * 1px;
+$font_size_xlarge: map-get($get-scale, gamma) * 1px;
+$font_size_large: map-get($get-scale, epsilon) * 1px;
+$font_size_medium: map-get($get-scale, zeta) * 1px;
+$font_size_small: map-get($get-scale, eta) * 1px;
+$font_size_xsmall: map-get($get-scale, iota) * 1px;
+
+$size: $font_size_medium;
+
+
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, YuGothic, "Yu Gothic", 游ゴシック体, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, "MS ゴシック", "MS Gothic", sans-serif;
+$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+
+$font-weight-normal: 300;
+$font-weight-bold: 700;
+
+
+// Add typefaces here.
+// Add weight and style details too.
+// ! Set cap height to set to the baseline.
+$font_body_type: (
+  font-family: $font-family-sans-serif,
+  cap-height: 0.66
+) !default;
+
+$font_heading_type: (
+  font-family: $font-family-serif,
+  cap-height: 0.66
+) !default;
+
+$font_monospace_type: (
+  font-family: $font-family-monospace,
+  cap-height: 0.68
+) !default;
+
+// Here are some local fonts cap-height sizes to get you started:
+// Georgia: 0.66, Times / Times New Roman: 0.65, Palatino: 0.52
+// Lucida Grande: 0.72, Helvetica: 0.66, Verdana: 0.76, Tahoma: 0.76
+
+// Selection of Typekit fonts cap-height sizes:
+// Proxima Nova: 0.57, Museo Slab: 0.66, JAF Facit: 0.7, Brandon Grotesque: 0.65, Clavo: 0.7, Adelle: 0.66, FF Tisa Pro: 0.82, Jubilat: 0.66, Futura PT: 0.66, Chaparral Pro: 0.5, Minion Pro: 0.66, Myriad Pro: 0.66, Adobe Caslon Pro: 0.36
+
+@mixin fontfamily_sansserif{
+  font-family: $font-family-sans-serif;
+  font-weight: $font-weight-normal;
+  font-style: normal;
+  font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
+}
+
+
+@mixin fontfamily_sansserif_bold{
+  font-family: $font-family-sans-serif;
+  font-weight: $font-weight-bold;
+  font-style: normal;
+  font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
+}
+
+
+
+@mixin fontfamily_serif{
+  font-family: $font-family-serif;
+  font-weight: $font-weight-normal;
+  font-style: normal;
+  font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
+}
+
+
+@mixin fontfamily_serif_bold{
+  font-family: $font-family-serif;
+  font-weight: $font-weight-bold;
+  font-style: normal;
+  font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
+}
+
+
+@mixin fontfamily_monospace{
+  font-family: $font-family-monospace;
+  font-weight: $font-weight-normal;
+  font-style: normal;
+  font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
+}
+
+@mixin fontfamily_monospace_bold{
+  font-family: $font-family-monospace;
+  font-weight: $font-weight-bold;
+  font-style: normal;
+  font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
+}
+
+
+// =fontfamily_sansserif_en
+//   font-family: "source-sans-pro",sans-serif;
+//   font-weight: $font-weight-normal;
+
+// =fontfamily_sansserif_semibold
+//   font-family: "source-sans-pro", sans-serif;
+//   font-weight: 600;
+
+// =fontfamily_sansserif_en_bold
+//   font-family: "source-sans-pro",sans-serif;
+//   font-weight: $font-weight-bold;
+
+

@@ -56,6 +56,12 @@
     @media #{$xlarge-only}
       @content
 
+  @if $size == "max-width"
+    $max-width-range: $row-width + rem-calc(1)
+    $max-width-up: "#{$screen} and (min-width:#{$max-width-range})"
+    @media #{$max-width-up}
+      @content
+
 
 
 // #guide

@@ -1,42 +1,10 @@
 // _section.sass は主に 縦マージンに関する記述
 // 全ページに適応される
 
-$section_margin: 30px
-
-body
-  overflow-x: hidden
-  width: 100%
-  position: relative
-
-#container
-  background: $bg_color
-  position: relative
 
 // #main
 //   margin: $section_margin * 2 0
-
 .page-section
-  margin: $section_margin * 2 0
+  padding-top: 2rem
   &.has-background
-    padding: $section_margin * 2 0
-  .s-header &
-    margin-top: 0
-  .s-footer &
-    margin-bottom: 0
-
-.content-section
-  margin: $section_margin * 2 0
-  &:first-child
-    margin-top: 0
-  &:last-child
-    margin-bottom: 0
-
-+respond-to("small-only")
-  .small-12 + .small-12
-    .content-section:first-child
-      margin-top: $section_margin * 2
-
-
-.s-main_header
-  .breadcrumbs
-    margin-bottom: 20px
+    padding-bottom: 2rem

@@ -1,6 +1,14 @@
 #header
   .page-section
-    background: $color_lightgray
+    padding: 6rem 0 4rem
+  .s-header_nav
+    padding-top: 2rem
+
+  .e-header_title
+    +sassline(51, $font_heading_type, 3, 2, all)
+  .e-header_description
+    +sassline($font_size_medium, $font_heading_type, 1, 1, all)
+
   +respond-to("small-only")
     .content-section
       margin-bottom: 0

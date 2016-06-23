@@ -1,24 +1,30 @@
 // Setting
-// @import "compass/css3"
-// @import "compass/utilities"
+// ・基礎系はプロジェクト全体のフォントサイズ、色などの定義
+@import "partials/settings/global"
+@import "partials/settings/font"
+@import "partials/settings/color"
+
+
+// vendor setting files
 @import "foundation/settings"
-@import "generated/icons"
+@import "sassline/variables";
+@import "sassline/mixins";
 
-// @import "libs/ss-standard/ss-standard"
-// @import "font-awesome-sprockets"
-// @import "font-awesome"
 
-@import "partials/nd/utility"
-@import "partials/nd/respond"
+@import "partials/settings/typography"
+@import "partials/settings/section"
+
+
 
 // ・nd は基本編集しません
 // ・プロジェクトも応用できそうな場合は コメントして、miyamoto に asanaで asign
+@import "generated/icons"
+@import "partials/nd/respond"
 @import "partials/nd/mixin"
 @import "partials/nd/animation"
 
-// ・基礎系はプロジェクト全体のフォントサイズ、色などの定義
-@import "partials/color"
-@import "partials/font"
+@import "partials/nd/base"
+
 
 // ページ全体のレイアウト
 // グリッド系, 横幅に関する記述
@@ -30,13 +36,6 @@
 // ・プロジェクトも応用できそうな場合は コメントして、miyamoto に asanaで asign
 @import "partials/nd/class"
 @import "partials/nd/sprite"
-@import "partials/nd/typography"
-
-
-@mixin cover_image
-  background-size: cover
-  background-repeat: no-repeat
-  background-position: center center
 
 
 // ・１ページ内に２回以上使う可能性があるものをモジュールに定義
@@ -56,6 +55,8 @@
 // header, footer に関する sass
 @import "partials/section/header"
 @import "partials/section/footer"
+
+@import "partials/section/main"
 
 
 ////

@@ -1,4 +1,4 @@
-<section id="main" class="l-article">
+<section id="main" class="l-article typeset">
   <section class="s-article_content page-section">
     <div class="row">
       <div class="small-12 medium-8 large-8 columns">
