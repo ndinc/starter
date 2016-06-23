@@ -4,9 +4,9 @@
         <div class="small-12 medium-12 large-12 columns">
           <section class="s-header_title content-section">
             <?php if (is_home()): ?>
-            <h1 class="e-h1 e-header_title"><a href="/asix_temp/AppleUSBEthernet.kext">Starter</a></h1>
+            <h1 class="e-h1 e-header_title"><a href="/">Starter</a></h1>
             <?php else: ?>
-            <p class="e-h1 e-header_title"><a href="/asix_temp/AppleUSBEthernet.kext">Starter</a></p>
+            <p class="e-h1 e-header_title"><a href="/">Starter</a></p>
             <?php endif ?>
             <p class="e-header_description">This is starter template created by nD inc.</p>
           </section>
