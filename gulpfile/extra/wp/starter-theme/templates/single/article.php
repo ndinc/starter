@@ -1,7 +1,7 @@
-<section id="main" class="l-article typeset">
+<section id="main" class="l-article">
   <section class="s-article_content page-section">
     <div class="row">
-      <div class="small-12 medium-8 large-8 columns">
+      <div class="small-12 medium-8 large-8 columns typeset">
         <header class="content-section">
           <h1 class="e-page_title title"><?php the_title() ?></h1>
           <p class="date text-right"><?php the_time('M j, Y'); ?></p>
@@ -15,7 +15,7 @@
           </div>
         </section>
       </div>
-      <div class="small-12 medium-4 large-4 columns">
+      <div class="small-12 medium-4 large-4 columns s-sidebar typeset">
         <?php include get_template_directory()."/templates/sections/sidebar.php" ?>
       </div>
     </div>
