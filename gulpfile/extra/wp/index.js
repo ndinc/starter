@@ -12,6 +12,7 @@ var wordpressTask = function(cb) {
       var wp = fs.readFileSync(path.join(options.download.path, 'wp-load.php'), 'utf8')
       if (wp) {
         gulpSequence(
+          'mamp:start',
           'db:create',
           'db:import',
           'wp:config',
@@ -38,5 +39,5 @@ var wordpressTask = function(cb) {
   }
 }
 
-gulp.task('wp:setup', ['setup'], wordpressTask)
+gulp.task('wp:setup', wordpressTask)
 module.exports = wordpressTask

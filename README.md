@@ -39,12 +39,12 @@ And, Change these values on **package.json**
 
 Then,
 
-#### Static Site
+#### Basic (required)
 ```bash
 $ gulp setup
 ```
 
-#### or Wordpress
+#### and Wordpress
 ```bash
 $ gulp wp:setup
 ```
