@@ -9,7 +9,7 @@ var initializeTask = function(cb) {
   if(package.name && package.name != 'starter' ){
     gulpSequence(
       'initPackage',
-      // 'git:init'
+      'git:init',
       'setupServerConfig'
     , cb)
   }else{
