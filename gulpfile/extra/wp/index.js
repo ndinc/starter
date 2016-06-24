@@ -21,16 +21,17 @@ var wordpressTask = function(cb) {
     } catch (e){
       if(e.code = 'ENOENT'){
         gulpSequence(
+          'mamp:start',
           'wp:download',
           'wp:config',
-          'db:create',
           'wp:directory',
+          'db:create',
           'wp:install',
-          'db:dump',
           'wp:plugin',
           'wp:theme',
           'wp:option',
           'wp:production',
+          'db:dump',
         cb);
       }
     }
