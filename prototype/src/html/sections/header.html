@@ -1,28 +1,27 @@
-  <header id="header" class="s-header">
-    <section class="page-section has-background">
-      <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
-          <section class="s-header_title content-section">
-            {% if id == 'home' %}
+<header id="header" class="s-header">
+  <section class="page-section has-background">
+    <div class="row">
+      <div class="columns">
+        <section class="s-header_title content-section">
+          {% if id == 'home' %}
             <h1 class="e-header_title">Starter</h1>
-            {% else %}
+          {% else %}
             <p class="e-header_title">Starter</p>
-            {% endif %}
-            <p class="e-header_description">This is starter template created by nD inc.</p>
-          </section>
-          <section class="content-section m-header_nav" js-hamburger>
-            <a href="javascript:void(0)" class="m-hamburger_btn" js-hamburger_btn>
-              <div></div><div></div><div></div>
-            </a>
-            <nav class="m-hamburger_content" js-hamburger_content>
-              <ul class="">
-                <li><a href="./">Home</a></li>
-                <li><a href="./article.html">Article</a></li>
-                <li><a href="./about.html">About</a></li>
-              </ul>
-            </nav>
-          </section>
-        </div>
+          {% endif %}
+        </section>
+        <section class="content-section m-header_nav" js-hamburger>
+          <a href="javascript:void(0)" class="m-hamburger_btn" js-hamburger_btn>
+            <div></div><div></div><div></div>
+          </a>
+          <nav class="m-hamburger_content" js-hamburger_content>
+            <ul class="">
+              <li><a href="./">Home</a></li>
+              <li><a href="./article.html">Article</a></li>
+              <li><a href="./about.html">About</a></li>
+            </ul>
+          </nav>
+        </section>
       </div>
-    </section>
-  </header><!-- /header -->
+    </div>
+  </section>
+</header>

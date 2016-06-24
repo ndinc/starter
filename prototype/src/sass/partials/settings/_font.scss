@@ -26,8 +26,8 @@ $font_size_xsmall: map-get($get-scale, iota) * 1px;
 $size: $font_size_medium;
 
 
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, YuGothic, "Yu Gothic", 游ゴシック体, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, "MS ゴシック", "MS Gothic", sans-serif;
-$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+$font-family-sans-serif: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+$font-family-serif: "游明朝", YuMincho, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 $font-weight-normal: 300;

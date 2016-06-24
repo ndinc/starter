@@ -1,7 +1,7 @@
 {
   "title": "Starter",
   "description": "nD starter template",
-  "keywords": "nD,gulp,starter,template",
+  "keywords": "nD, gulp, starter, template",
   "site_name": "Starter",
   "url": "{{domain.json|production}}",
   "image": "images/ogp.png",
