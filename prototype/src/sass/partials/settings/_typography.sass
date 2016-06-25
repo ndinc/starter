@@ -80,12 +80,6 @@
     color: $visited_color
   &:focus
     color: $focus_color
-  p &
-    margin: 0 .1em
-    // text-decoration: underline
-    padding: 2px
-    &:hover
-      border-bottom: 1px solid $hover_color
 
 =headline_a
   &,
@@ -101,6 +95,8 @@
   background-repeat: repeat-x
   background-size: 100% 0.15rem
   text-shadow: 0.1rem 0 $bg_color, 0.15rem 0 $bg_color, -0.1rem 0 $bg_color, -0.15rem 0 $bg_color
+  margin: 0 .1em
+  +rem(padding, 0 2px)
   &:hover, &:active, &:focus
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($hover_color,20%) 50%)
 
