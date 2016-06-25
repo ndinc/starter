@@ -34,7 +34,7 @@ export default class Index {
     $article.on('mouseenter', (e)=> {
       const $el = $(e.currentTarget).find('img')
       $el.velocity({
-        'scale': 1.1
+        // 'scale': 1.1
       }, {
         easing: 'easeOutQuart',
         duration: 500

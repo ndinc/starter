@@ -1,14 +1,20 @@
 #header
   .page-section
-    padding: 6rem 0 4rem
+    margin-bottom: 2rem
+    padding: 2rem 0
+    background: rgba($color_lightgray, .75)
   .s-header_nav
     padding-top: 2rem
-
   .e-header_title
-    +sassline(51, $font_heading_type, 3, 2, all)
+
+    +respond-to("medium-up")
+      +sassline(51, $font_heading_type, 3, 2, all)
+    +respond-to("small-only")
+      text-align: center
+      +sassline(40, $font_heading_type, 1, 0, all)
+
   .e-header_description
     +sassline($font_size_medium, $font_heading_type, 1, 1, all)
-
   +respond-to("small-only")
     .content-section
       margin-bottom: 0

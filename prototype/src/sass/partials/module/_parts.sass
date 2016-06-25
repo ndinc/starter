@@ -1,4 +1,4 @@
-$hamburget_width: 220px
+$hamburget_width: 240px
 
 .m-header_nav
   .m-hamburger_btn
@@ -8,7 +8,6 @@ $hamburget_width: 220px
       +inline-list
   +respond-to("small-only")
     display: none
-
 
 #container
   transition: all 0.4s ease
@@ -30,59 +29,67 @@ $hamburget_width: 220px
   z-index: 0
   width: 100%
   height: 100%
-  padding: 75px 25px 0
+  padding: 75px 0 0
   background: lighten($color_darkgray, 0%)
   width: $hamburget_width
   ul
+    border-bottom: 1px solid $color_gray
     li
-      padding: 15px 0
-      line-height: 1.8
+      line-height: 1.0
+      border-top: 1px solid $color_gray
       + li
-        border-top: 1px solid #fff
-
+        border-top: 1px solid $color_gray
     a
       color: $color_white
+      padding: 25px 25px
+      display: block
 
 .m-hamburger_btn
   +respond-to("medium-up")
     display: none
   $bar_color: $color_black
+  transition: all 0.4s ease
   cursor: pointer
   width: 40px
   height: 40px
+  margin-left: -10px
+  padding: 12px 10px
   display: block
   +mcfix
   position: fixed
   z-index: 5001
-  top: 25px
+  top: 15px
   left: 25px
   & > div
+    transition: all 0.4s ease
     background: $bar_color
-    height: 5px
+    height: 2px
     line-height: 1
-    margin-bottom: 6px
+    margin-bottom: 5px
     float: left
-    width: 100%
+    width: 20px
   & > div:nth-child(1),
   & > div:nth-child(3)
     float: right
   .is-active_hamburger &
-    transition: all 0.4s ease
-    transform: scale(1) rotate(180deg) translate(0, 4px)
+    transform: scale(1) rotate(180deg) translate(0, 0)
     & > div
-      transition: all 0.4s ease
       background: #fff
     & > div:nth-child(1),
     & > div:nth-child(3)
       width: 65%
 
     & > div:nth-child(2)
-      width: 90%
+      width: 20px
 
     & > div:nth-child(1)
-      transform: scale(1) rotate(45deg) translate(2px, 2px)
+      // transform: scale(1) rotate(135deg) translate(8px, 4px)
+      //transform: scale(1) rotate(135deg) translate(10px, -7px)
+      transform: scale(1) rotate(45deg) translate(4px, 0px)
     & > div:nth-child(3)
-      transform: scale(1) rotate(-45deg) translate(2px, -2px)
+      // transform: scale(1) rotate(-135deg) translate(8px, -4px)
+      //transform: scale(1) rotate(-135deg) translate(12px, 8px)
+      transform: scale(1) rotate(-45deg) translate(4px, 0px)
 
   .is-active_hamburger.is-active_end
     transform: scale(1) rotate(360deg) translate(0, 0)
