@@ -28,7 +28,13 @@ $size: $font_size_medium;
 
 $font-family-sans-serif: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
 $font-family-serif: "游明朝", YuMincho, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
-$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+
+
+$font-family-sans-serif-en: sans-serif;
+$font-family-serif-en: serif;
+
+
+// $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 $font-weight-normal: 300;
 $font-weight-bold: 700;
@@ -43,14 +49,17 @@ $font_body_type: (
 ) !default;
 
 $font_heading_type: (
-  font-family: $font-family-serif,
+  font-family: $font-family-sans-serif,
   cap-height: 0.66
 ) !default;
 
-$font_monospace_type: (
-  font-family: $font-family-monospace,
-  cap-height: 0.68
-) !default;
+
+
+
+// $font_monospace_type: (
+//   font-family: $font-family-monospace,
+//   cap-height: 0.68
+// ) !default;
 
 // Here are some local fonts cap-height sizes to get you started:
 // Georgia: 0.66, Times / Times New Roman: 0.65, Palatino: 0.52
@@ -92,19 +101,19 @@ $font_monospace_type: (
 }
 
 
-@mixin fontfamily_monospace{
-  font-family: $font-family-monospace;
-  font-weight: $font-weight-normal;
-  font-style: normal;
-  font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
-}
+// @mixin fontfamily_monospace{
+//   font-family: $font-family-monospace;
+//   font-weight: $font-weight-normal;
+//   font-style: normal;
+//   font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
+// }
 
-@mixin fontfamily_monospace_bold{
-  font-family: $font-family-monospace;
-  font-weight: $font-weight-bold;
-  font-style: normal;
-  font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
-}
+// @mixin fontfamily_monospace_bold{
+//   font-family: $font-family-monospace;
+//   font-weight: $font-weight-bold;
+//   font-style: normal;
+//   font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
+// }
 
 
 // =fontfamily_sansserif_en

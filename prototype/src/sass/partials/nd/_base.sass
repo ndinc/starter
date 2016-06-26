@@ -47,12 +47,9 @@ table
 
 // Typography
 // ---------------------------------------
-
-// Setting root sizes and base styles.
 html
   +html
 
-// Site-wide base styles.
 body
   +body
 
@@ -63,7 +60,8 @@ body
   @if $line-grid == true or $line-all == true
     &
       background-repeat: repeat-y
-      background-image: linear-gradient(to bottom, cyan 0, rgba(255,255,255,0) 1px)
+      // background-image: linear-gradient(to bottom, cyan 0, rgba(255,255,255,0) 1px)
+      background-image: linear-gradient(to bottom, rgba(0, 0, 255, .1) 0, rgba(255,255,255,0) 1px)
       background-size: 100% 1rem
   @if $line-vartical == true or $line-all == true
     &:before
@@ -78,7 +76,7 @@ body
       height: 100%
       border-right: 1px solid pink
       border-left: 1px solid pink
-      background-image: linear-gradient(to left, red 1px, rgba(255,255,255,0) 0px)
+      background-image: linear-gradient(to left, rgba(0, 0, 255, .1) 1px, rgba(255,255,255,0) 0px)
       background-repeat: repeat-x
       background-size: 8.4% 100%
       background-position: 1px center
