@@ -1,6 +1,7 @@
 try {
   var server = require('../../../server.config')
 } catch (e){
+  console.log(gutil.colors['red']('Create server.config.js'));
   if(e.code = 'MODULE_NOT_FOUND') return
 }
 var config       = require('../../config')
