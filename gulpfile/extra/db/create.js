@@ -1,3 +1,5 @@
+var gutil   = require("gulp-util")
+
 try {
   var server = require('../../../server.config')
 } catch (e){
