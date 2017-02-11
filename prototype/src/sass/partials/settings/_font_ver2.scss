@@ -7,11 +7,11 @@ $font-family-sans-serif-bold: "YakuHanJP", "游ゴシック", YuGothic, "ヒラ�
 $font-weight-sans-serif-bold: bold;
 
 // Japanese Serif Normal
-$font-family-serif: "YakuHanJP", "游明朝", YuMincho, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+$font-family-serif: "游明朝", YuMincho, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
 $font-weight-serif: normal;
 
 // Japanese Serif Bold
-$font-family-serif-bold: "YakuHanJP", "游明朝", YuMincho, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+$font-family-serif-bold: "游明朝", YuMincho, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
 $font-weight-serif-bold: bold;
 
 // English Sans-Serif Normal
@@ -20,18 +20,16 @@ $font-weight-sans-serif-en: 300;
 
 // English Sans-Serif Bold
 $font-family-sans-serif-bold-en: 'Open Sans Condensed', sans-serif;
-$font-weight-sans-serif-bold-en: 700 ;
+$font-weight-sans-serif-bold-en: 700;
 
 // English Serif Normal
 $font-family-serif-en: 'Playfair Display', serif, serif;
-$font-weight-serif-en: 400  ;
+$font-weight-serif-en: 400;
 
 // English Serif Bold
 $font-family-serif-bold-en: 'Playfair Display', serif;
-$font-weight-serif-bold-en: 700 ;
-// 以上、中原案
+$font-weight-serif-bold-en: 700;
 
-// 以下、中原案
 $font_sansserif: (
   font-family: $font-family-sans-serif,
   font-weight: $font-weight-sans-serif,

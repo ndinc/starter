@@ -334,7 +334,7 @@ $max-widths: map-values($maxwidths);
 
   line-height: #{$lineheight}rem;
   font-family: map-get($font, font-family);
-
+  font-weight: map-get($font, font-weight);
 
   @if $break-value == number and $breakpoint <= ($breakpoints-limit - 1) and $breakpoint >= 0 {
 

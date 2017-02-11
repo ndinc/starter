@@ -2,16 +2,3 @@
 
 $get-scale: map-get($modular-scale, scale-0);
 $size: map-get($get-scale, zeta) * 1px;
-
-$font-weight-normal: normal;
-$font-weight-bold: bold;
-
-$font_body_type: (
-  font-family: sans-serif,
-  cap-height: 0.66
-) !default;
-
-$font_heading_type: (
-  font-family: sans-serif,
-  cap-height: 0.66
-) !default;

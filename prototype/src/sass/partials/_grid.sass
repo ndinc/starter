@@ -1,18 +1,9 @@
-+respond-to("large-up")
-  .row-large-up
-    width: 1280px
-    margin-left: auto
-    margin-right: auto
-    max-width: 100%
-  .row-full
+.row-full
+  +respond-to("large-up")
     > .columns
       padding: 0
       float: none
       clear: both
-
-+respond-to("small-only")
-  .row-full
-    margin: 15px
 
 @mixin selection
   ::-moz-selection
