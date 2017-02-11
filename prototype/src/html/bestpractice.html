@@ -1,0 +1,224 @@
+{% set id = 'home' %}
+{% extends 'layouts/application.html' %}
+{% block ogp %}
+  <meta property="og:title" content="OPG TITLE">
+  <meta property="og:description" content="OPG DESCRIPTION">
+  <meta property="og:url" content="OPG URL">
+  <meta property="og:image" content="OPG IMAGE">
+  <meta property="og:site_name" content="OPG SITE_NAME">
+  <meta property="og:type" content="OPG TYPE">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="TWITTER SITE">
+  <meta name="twitter:title" content="TWITTER TITLE">
+  <meta name="twitter:description" content="TWITTER DESCRIPTION">
+  <meta name="twitter:image:src" content="TWITTER IMAGE:SRC">
+  <meta name="twitter:domain" content="TWITTER DOMAIN">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/atom-one-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <style>
+    .typeset code {
+        background-color: #333 !important;
+    }
+  </style>
+
+{% endblock %}
+{% block main %}
+<section id="main" class="l-home">
+  <header class="s-main_header page-header">
+    <div class="row">
+      <div class="columns">
+        <h2 class="e-page_title">BEST PRACTICE</h2>
+      </div>
+    </div>
+  </header>
+  <section class="s-main_content page-section">
+    <div class="row">
+      <div class="columns">
+        <section class="content-section typeset">
+          <pre>
+            <code>
+              ※ html のセクション単位の事例
+              ※ html 記事ページの事例
+            </code>
+          </pre>
+
+          <pre>
+            <code>
+              ul.list-article
+                .m-list-article
+                  a
+                    div.picture
+                      div.image
+                      span.caption
+                    div.text
+
+              ul.list-caption
+                .m-list-caption
+                  span.asterisk
+                  span.text
+
+              ul.list-number
+
+              ul.list-dot
+            </code>
+          </pre>
+
+          <pre>
+            <code>
+              p
+                &.lead
+                &.text
+                &.category
+                .caption-box&
+                .note-box&
+            </code>
+          </pre>
+
+          <pre>
+            <code>
+              +sassline(zeta, $font_sansserif, 1.8, 1.5, all)
+              +sassline(zeta, $font_sansserif_bold, 1.8, 1.5, all)
+              +sassline(zeta, $font_serif, 1.8, 1.5, all)
+              +sassline(zeta, $font_serif_bold, 1.8, 1.5, all)
+              +sassline(zeta, $font_sansserif_en, 1.8, 1.5, all)
+              +sassline(zeta, $font_sansserif_bold_en, 1.8, 1.5, all)
+              +sassline(zeta, $font_serif_en, 1.8, 1.5, all)
+              +sassline(zeta, $font_serif_bold_en, 1.8, 1.5, all)
+
+              alpha:   28.0,
+              beta:    25.0,
+              gamma:   22.4,
+              delta:   20.0,
+              epsilon: 17.9,
+              zeta:    16.0,
+              eta:     14.3,
+              theta:   12.8,
+              iota:    11.5
+
+            </code>
+          </pre>
+
+          <pre>
+            <code>
+              +respond-to("large-up")
+              +respond-to("medium-up")
+              +respond-to("small-only")
+            </code>
+          </pre>
+
+          <pre>
+            <code>
+              br
+                &.show-for-small-only
+                &.show-for-medium-up
+                &.show-for-medium-only
+                &.show-for-large-up
+                &.show-for-large-only
+                &.show-for-xlarge-up
+                &.show-for-xlarge-only
+                &.show-for-xxlarge-up
+            </code>
+          </pre>
+
+          <pre>
+            <code>
+              dl.table
+                dt
+                dd
+              ※ レスポンシブで sp だとテーブルじゃない
+            </code>
+          </pre>
+
+          <pre>
+            <code>
+              .timestamp
+                span.date
+                  span.year
+                  span.month
+                  span.day
+                  span.week
+                  span.slash
+                span.time
+                  span.colon
+                  span.hour
+                  span.minute
+                  span.second
+                ※ htmlの仕様的にこれで良い？
+            </code>
+          </pre>
+
+          <pre>
+            <code>
+              {% for item in array %}
+                {{item}}
+              {% endfor %}
+
+              {% if obj.layout == "grid" %}
+              {% elif obj.layout == "carousel" or obj.layout == "banner" %}
+              {% endif %}
+
+              {% include "modules/article.html" %}
+
+              {% set obj = {
+                             layout: "grid",
+                             single: true,
+                             comment: true,
+                             update: true
+                            } %}
+
+              {% if obj.description %}
+              {% endif %}
+
+              {% if obj.pagenation != false %}
+                {% include "modules/article.html" %}
+              {% endif %}
+            </code>
+          </pre>
+
+          <pre>
+            <code>
+              <div class="m-youtube">
+                <iframe src="//www.youtube.com/embed/_BKVfbwI3X4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </code>
+          </pre>
+
+          <pre>
+            <code>
+              .spacer
+              ※ pc / sp で高さを変えられる
+            </code>
+          </pre>
+
+          <pre>
+            <code>
+              .cta
+                &.small
+                &.large
+            </code>
+          </pre>
+
+          <pre>
+            <code>
+              .cta-box
+              .cta
+                &.small
+                &.large
+            </code>
+          </pre>
+
+          <pre>
+            <code>
+              カルーセルのコード、html+js
+            </code>
+          </pre>
+        </section>
+      </div>
+    </div>
+  </section>
+
+</section>
+{% endblock %}
+{% block javascript %}
+{% endblock %}
