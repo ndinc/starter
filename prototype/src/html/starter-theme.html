@@ -1,34 +1,26 @@
 {% set id = 'home' %}
 {% extends 'layouts/application.html' %}
 {% block ogp %}
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/atom-one-dark.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-  <style>
-    .typeset code {
-        background-color: #333 !important;
-    }
-
-  </style>
 {% endblock %}
 {% block main %}
 <section id="main" class="l-home">
-  <header class="s-main_header page-header">
+  <header class="page-header s-header">
     <div class="row">
       <div class="columns">
-        <h2 class="e-page_title">はじめに</h2>
+        <h2 class="e-page-title">はじめに</h2>
       </div>
     </div>
   </header>
-  <section class="s-main_content page-section typeset">
+  <section class="page-section s-main">
     <div class="row">
-      <div class="medium-8 large-8 columns">
-        <section class="content-section typeset">
+      <div class="columns">
+        <section class="content-section">
 
 
 
           <h3 class="e-section-title">Sans Serif</h3>
           <p class="font_sansserif_alpha">インターネットの外側を、もっと楽しく豊かに。</p>
+          <p class="font_sansserif_beta">インターネットの外側を、もっと楽しく豊かに。</p>
           <p class="font_sansserif_gamma">インターネットの外側を、もっと楽しく豊かに。</p>
           <p class="font_sansserif_delta">インターネットの外側を、もっと楽しく豊かに。</p>
           <p class="font_sansserif_epsilon">インターネットの外側を、もっと楽しく豊かに。</p>
@@ -39,6 +31,7 @@
 
           <h3 class="e-section-title">Sans Serif Bold</h3>
           <p class="font_sansserif_bold_alpha">インターネットの外側を、もっと楽しく豊かに。</p>
+          <p class="font_sansserif_bold_beta">インターネットの外側を、もっと楽しく豊かに。</p>
           <p class="font_sansserif_bold_gamma">インターネットの外側を、もっと楽しく豊かに。</p>
           <p class="font_sansserif_bold_delta">インターネットの外側を、もっと楽しく豊かに。</p>
           <p class="font_sansserif_bold_epsilon">インターネットの外側を、もっと楽しく豊かに。</p>
@@ -49,6 +42,7 @@
 
           <h3 class="e-section-title">Sans Serif</h3>
           <p class="font_serif_alpha">インターネットの外側を、もっと楽しく豊かに。</p>
+          <p class="font_serif_beta">インターネットの外側を、もっと楽しく豊かに。</p>
           <p class="font_serif_gamma">インターネットの外側を、もっと楽しく豊かに。</p>
           <p class="font_serif_delta">インターネットの外側を、もっと楽しく豊かに。</p>
           <p class="font_serif_epsilon">インターネットの外側を、もっと楽しく豊かに。</p>
@@ -59,6 +53,7 @@
 
           <h3 class="e-section-title">Sans Bold</h3>
           <p class="font_serif_bold_alpha">インターネットの外側を、もっと楽しく豊かに。</p>
+          <p class="font_serif_bold_beta">インターネットの外側を、もっと楽しく豊かに。</p>
           <p class="font_serif_bold_gamma">インターネットの外側を、もっと楽しく豊かに。</p>
           <p class="font_serif_bold_delta">インターネットの外側を、もっと楽しく豊かに。</p>
           <p class="font_serif_bold_epsilon">インターネットの外側を、もっと楽しく豊かに。</p>
@@ -70,44 +65,48 @@
 
 
           <h3 class="e-section-title">Sans Serif English</h3>
-          <p class="font_sansserif_en_alpha">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_sansserif_en_gamma">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_sansserif_en_delta">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_sansserif_en_epsilon">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_sansserif_en_zeta">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_sansserif_en_eta">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_sansserif_en_theta">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_sansserif_en_iota">Make it delightful &amp; better outside of the internet</p>
+          <p class="font_sansserif_en_alpha">Make it good outside of the internet</p>
+          <p class="font_sansserif_en_beta">Make it good outside of the internet</p>
+          <p class="font_sansserif_en_gamma">Make it good outside of the internet</p>
+          <p class="font_sansserif_en_delta">Make it good outside of the internet</p>
+          <p class="font_sansserif_en_epsilon">Make it good outside of the internet</p>
+          <p class="font_sansserif_en_zeta">Make it good outside of the internet</p>
+          <p class="font_sansserif_en_eta">Make it good outside of the internet</p>
+          <p class="font_sansserif_en_theta">Make it good outside of the internet</p>
+          <p class="font_sansserif_en_iota">Make it good outside of the internet</p>
 
           <h3 class="e-section-title">Sans Serif Bold English</h3>
-          <p class="font_sansserif_bold_en_alpha">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_sansserif_bold_en_gamma">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_sansserif_bold_en_delta">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_sansserif_bold_en_epsilon">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_sansserif_bold_en_zeta">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_sansserif_bold_en_eta">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_sansserif_bold_en_theta">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_sansserif_bold_en_iota">Make it delightful &amp; better outside of the internet</p>
+          <p class="font_sansserif_bold_en_alpha">Make it good outside of the internet</p>
+          <p class="font_sansserif_bold_en_beta">Make it good outside of the internet</p>
+          <p class="font_sansserif_bold_en_gamma">Make it good outside of the internet</p>
+          <p class="font_sansserif_bold_en_delta">Make it good outside of the internet</p>
+          <p class="font_sansserif_bold_en_epsilon">Make it good outside of the internet</p>
+          <p class="font_sansserif_bold_en_zeta">Make it good outside of the internet</p>
+          <p class="font_sansserif_bold_en_eta">Make it good outside of the internet</p>
+          <p class="font_sansserif_bold_en_theta">Make it good outside of the internet</p>
+          <p class="font_sansserif_bold_en_iota">Make it good outside of the internet</p>
 
           <h3 class="e-section-title">Sans Serif English</h3>
-          <p class="font_serif_en_alpha">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_serif_en_gamma">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_serif_en_delta">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_serif_en_epsilon">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_serif_en_zeta">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_serif_en_eta">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_serif_en_theta">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_serif_en_iota">Make it delightful &amp; better outside of the internet</p>
+          <p class="font_serif_en_alpha">Make it good outside of the internet</p>
+          <p class="font_serif_en_beta">Make it good outside of the internet</p>
+          <p class="font_serif_en_gamma">Make it good outside of the internet</p>
+          <p class="font_serif_en_delta">Make it good outside of the internet</p>
+          <p class="font_serif_en_epsilon">Make it good outside of the internet</p>
+          <p class="font_serif_en_zeta">Make it good outside of the internet</p>
+          <p class="font_serif_en_eta">Make it good outside of the internet</p>
+          <p class="font_serif_en_theta">Make it good outside of the internet</p>
+          <p class="font_serif_en_iota">Make it good outside of the internet</p>
 
           <h3 class="e-section-title">Sans Bold English</h3>
-          <p class="font_serif_bold_en_alpha">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_serif_bold_en_gamma">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_serif_bold_en_delta">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_serif_bold_en_epsilon">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_serif_bold_en_zeta">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_serif_bold_en_eta">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_serif_bold_en_theta">Make it delightful &amp; better outside of the internet</p>
-          <p class="font_serif_bold_en_iota">Make it delightful &amp; better outside of the internet</p>
+          <p class="font_serif_bold_en_alpha">Make it good outside of the internet</p>
+          <p class="font_serif_bold_en_beta">Make it good outside of the internet</p>
+          <p class="font_serif_bold_en_gamma">Make it good outside of the internet</p>
+          <p class="font_serif_bold_en_delta">Make it good outside of the internet</p>
+          <p class="font_serif_bold_en_epsilon">Make it good outside of the internet</p>
+          <p class="font_serif_bold_en_zeta">Make it good outside of the internet</p>
+          <p class="font_serif_bold_en_eta">Make it good outside of the internet</p>
+          <p class="font_serif_bold_en_theta">Make it good outside of the internet</p>
+          <p class="font_serif_bold_en_iota">Make it good outside of the internet</p>
 
 
 
@@ -138,9 +137,6 @@
             <a href="/images/_dummy.jpg" data-rel="lightcase">lightcase js plugin sample (when you turn off comment)</a>
           </p>
         </section>
-      </div>
-      <div class="medium-4 large-4 columns">
-        {% include "sections/sidebar.html" %}
       </div>
     </div>
   </section>

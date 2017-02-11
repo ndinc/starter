@@ -9,27 +9,46 @@
         background-color: #333 !important;
     }
   </style>
-
 {% endblock %}
 {% block main %}
 <section id="main" class="l-home">
-  <header class="s-main_header page-header">
+  <header class="page-header s-header">
     <div class="row">
       <div class="columns">
-        <h2 class="e-page_title">BEST PRACTICE</h2>
+        <h2 class="e-page-title">BEST PRACTICE</h2>
       </div>
     </div>
   </header>
-  <section class="s-main_content page-section">
+  <section class="page-section s-main">
     <div class="row">
       <div class="columns">
         <section class="content-section typeset">
           <pre>
             <code>
-              ※ html のセクション単位の事例
-              ※ html 記事ページの事例
+              &lt;section class="page-section s-xxx"&gt;
+                &lt;header class="content-header"&gt;
+                  &lt;div class="row"&gt;
+                    &lt;div class="columns"&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/header&gt;
+                &lt;section class="content-section"&gt;
+                  &lt;div class="row"&gt;
+                    &lt;div class="columns"&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/section&gt;
+                &lt;footer class="content-footer"&gt;
+                  &lt;div class="row"&gt;
+                    &lt;div class="columns"&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/footer&gt;
+              &lt;/section&gt;
             </code>
           </pre>
+
+
 
           <pre>
             <code>

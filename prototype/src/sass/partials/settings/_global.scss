@@ -44,28 +44,12 @@ $breakpoints: (
   xlarge: $xlarge-breakpoint-px   // 1600px  ~ Large desktop up
 ) !default;
 
-
 // Gutter widths
 $gutterwidths: (
   small: 1rem,
   medium: 2rem,
   large: 4rem
 ) !default;
-
-
-// Text colours. British English.
-$headingColour: #2E2E2E !default;
-$bodyColour: #494949 !default;
-$linkColour: #0E58F5 !default;
-$hoverColour: #0B348B !default;
-$captionColour: #BDC8CC !default;
-$white: #FFFFFF !default;
-
-// Background colours.
-$backgroundColour: #FCFCFC !default;
-$codeBackgroundColour: #F5F4F2 !default;
-
-
 
 // ---------------------------------------------------------------
 // Path

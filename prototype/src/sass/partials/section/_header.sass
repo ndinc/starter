@@ -1,19 +1,16 @@
 #header
-  .page-section
-    margin-bottom: 2rem
-    padding: 2rem 0
-    background: rgba($color_lightgray, .75)
+  background: rgba($color_lightgray, .75)
+  +respond-to("medium-up")
+    padding-top: $spacer-vertical * 4
+    padding-bottom: $spacer-vertical * 4
+  +respond-to("small-only")
+    padding-top: $spacer-vertical * 2
+    padding-bottom: $spacer-vertical * 2
+
   .s-header_nav
     padding-top: 2rem
   .e-header_title
-    +sassline(alpha, $font_sansserif_bold_en, 1.8, 1.5, all)
-    // font-weight: bold !important
+    +sassline(alpha, $font_sansserif_bold_en, 2.0, 2.0, all)
     +respond-to("medium-up")
     +respond-to("small-only")
       text-align: center
-
-  .e-header_description
-
-  +respond-to("small-only")
-    .content-section
-      margin-bottom: 0

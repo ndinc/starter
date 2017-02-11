@@ -1,5 +1,7 @@
 #footer
-  .page-section
-    background: rgba($color_lightgray, .75)
+  +respond-to("medium-up")
+    padding-bottom: $spacer-vertical * 8
+  +respond-to("small-only")
+    padding-bottom: $spacer-vertical * 4
   p
-    +sassline(theta, $font_sansserif_bold_en, 1.8, 1.5, all)
+    +sassline(theta, $font_sansserif_en, 1.0, 1.0, all)
