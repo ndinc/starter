@@ -1,3 +1,9 @@
+.row
+  +respond-to("small-only")
+    > .columns
+      padding-right: .625rem * 2
+      padding-left: .625rem * 2
+
 .row-full
   +respond-to("large-up")
     > .columns
@@ -40,8 +46,6 @@ $spacer-vertical: $size
       padding-bottom: $spacer-vertical * 2
       &:first-child
         padding-top: 0
-      // &:last-child
-      //   padding-bottom: 0
     +respond-to("small-only")
       padding-top: $spacer-vertical * 2
       padding-bottom: $spacer-vertical
@@ -52,4 +56,10 @@ $spacer-vertical: $size
         border-bottom: 1px solid #f3f3f3
       +respond-to("small-only")
     .content-section
+      +respond-to("medium-up")
+        padding-top: $spacer-vertical * 4
+        padding-bottom: $spacer-vertical * 2
+      +respond-to("small-only")
+        padding-top: $spacer-vertical * 2
+        padding-bottom: $spacer-vertical
     .content-footer
