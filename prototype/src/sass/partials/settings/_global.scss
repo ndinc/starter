@@ -9,11 +9,11 @@ $rem-base: $rem-base-num * 1px;
 
 // 各 media query の rootsize
 $rootsizes: (
-  rootsize-0: $rem-base-num - 4,   // 24px line-height body text {small-only}
-  rootsize-1: $rem-base-num - 2,   // 28px line-height body text {medium-up}
+  rootsize-0: $rem-base-num,   // 30px line-height body text {small-only}
+  rootsize-1: $rem-base-num,   // 30px line-height body text {medium-up}
   rootsize-2: $rem-base-num,   // 30px line-height body text {large-up}
-  rootsize-3: $rem-base-num + 1,   // 34px line-height body text {xlarge-up}
-  rootsize-4: $rem-base-num + 2    // 38px line-height body text {xxlarge-up}
+  rootsize-3: $rem-base-num,   // 30px line-height body text {xlarge-up}
+  rootsize-4: $rem-base-num    // 30px line-height body text {xxlarge-up}
 ) !default;
 
 
